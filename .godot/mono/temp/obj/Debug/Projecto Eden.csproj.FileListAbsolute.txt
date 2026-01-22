@@ -1,0 +1,18 @@
+/home/dev/Programacion/Proyecto Eden/proyecto-eden/.godot/mono/temp/bin/Debug/Projecto Eden.deps.json
+/home/dev/Programacion/Proyecto Eden/proyecto-eden/.godot/mono/temp/bin/Debug/Projecto Eden.runtimeconfig.json
+/home/dev/Programacion/Proyecto Eden/proyecto-eden/.godot/mono/temp/bin/Debug/Projecto Eden.dll
+/home/dev/Programacion/Proyecto Eden/proyecto-eden/.godot/mono/temp/bin/Debug/Projecto Eden.pdb
+/home/dev/Programacion/Proyecto Eden/proyecto-eden/.godot/mono/temp/bin/Debug/GodotSharp.dll
+/home/dev/Programacion/Proyecto Eden/proyecto-eden/.godot/mono/temp/bin/Debug/GodotSharpEditor.dll
+/home/dev/Programacion/Proyecto Eden/proyecto-eden/.godot/mono/temp/obj/Debug/Projecto Eden.csproj.AssemblyReference.cache
+/home/dev/Programacion/Proyecto Eden/proyecto-eden/.godot/mono/temp/obj/Debug/Projecto Eden.GeneratedMSBuildEditorConfig.editorconfig
+/home/dev/Programacion/Proyecto Eden/proyecto-eden/.godot/mono/temp/obj/Debug/Projecto Eden.AssemblyInfoInputs.cache
+/home/dev/Programacion/Proyecto Eden/proyecto-eden/.godot/mono/temp/obj/Debug/Projecto Eden.AssemblyInfo.cs
+/home/dev/Programacion/Proyecto Eden/proyecto-eden/.godot/mono/temp/obj/Debug/Projecto Eden.csproj.CoreCompileInputs.cache
+/home/dev/Programacion/Proyecto Eden/proyecto-eden/.godot/mono/temp/obj/Debug/Projecto Eden.sourcelink.json
+/home/dev/Programacion/Proyecto Eden/proyecto-eden/.godot/mono/temp/obj/Debug/Projecto.7F8EE397.Up2Date
+/home/dev/Programacion/Proyecto Eden/proyecto-eden/.godot/mono/temp/obj/Debug/Projecto Eden.dll
+/home/dev/Programacion/Proyecto Eden/proyecto-eden/.godot/mono/temp/obj/Debug/refint/Projecto Eden.dll
+/home/dev/Programacion/Proyecto Eden/proyecto-eden/.godot/mono/temp/obj/Debug/Projecto Eden.pdb
+/home/dev/Programacion/Proyecto Eden/proyecto-eden/.godot/mono/temp/obj/Debug/Projecto Eden.genruntimeconfig.cache
+/home/dev/Programacion/Proyecto Eden/proyecto-eden/.godot/mono/temp/obj/Debug/ref/Projecto Eden.dll

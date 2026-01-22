@@ -1,10 +1,32 @@
-[gd_scene load_steps=2 format=3 uid="uid://b4kxx5satbfoq"]
+[gd_scene load_steps=6 format=3 uid="uid://b4kxx5satbfoq"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_isbo6"]
+[ext_resource type="Script" uid="uid://djogeovpnsqbp" path="res://scripts/characters/player/Pepin.cs" id="1_1crxk"]
+[ext_resource type="Texture2D" uid="uid://diyriqj1k80ke" path="res://assets/characters/player/player_sprite.png" id="1_57vct"]
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_1crxk"]
+atlas = ExtResource("1_57vct")
+region = Rect2(0, 0, 32, 32)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_isbo6")
+[sub_resource type="AtlasTexture" id="AtlasTexture_c3488"]
+atlas = ExtResource("1_57vct")
+region = Rect2(32, 0, 32, 32)
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[sub_resource type="SpriteFrames" id="SpriteFrames_o4jik"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1crxk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c3488")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_1crxk")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_o4jik")

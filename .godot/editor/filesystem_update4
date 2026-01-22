@@ -1,0 +1,5 @@
+res://scenes/characters/player/pepin.tscn
+res://scripts/characters/player/Pepin.cs
+res://scenes/levels/Level.tscn
+res://scenes/characters/enemy/enemy.tscn
+res://scripts/characters/enemy/Enemy.cs
