@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class Enemy : CharacterBody2D
+public partial class Jesucristo : CharacterBody2D
 {
     [Export]
     public float Speed = 80f;
@@ -12,6 +12,9 @@ public partial class Enemy : CharacterBody2D
     {
         // Busca al jugador por grupo (recomendado)
         player = GetTree().GetFirstNodeInGroup("player") as Node2D;
+
+        // Añadir este enemigo al grupo 'enemies' para que el Spawner pueda contarlos
+        AddToGroup("enemies");
     }
 
     public override void _PhysicsProcess(double delta)

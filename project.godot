@@ -24,6 +24,10 @@ window/size/mode=3
 
 project/assembly_name="Projecto Eden"
 
+[global_group]
+
+enemies="Grupo de enemigos para el spawn"
+
 [input]
 
 arriba={

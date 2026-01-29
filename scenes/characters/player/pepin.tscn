@@ -1,32 +1,50 @@
-[gd_scene load_steps=6 format=3 uid="uid://b4kxx5satbfoq"]
+[gd_scene load_steps=8 format=3 uid="uid://b4kxx5satbfoq"]
 
 [ext_resource type="Script" uid="uid://djogeovpnsqbp" path="res://scripts/characters/player/Pepin.cs" id="1_1crxk"]
-[ext_resource type="Texture2D" uid="uid://diyriqj1k80ke" path="res://assets/characters/player/player_sprite.png" id="1_57vct"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1crxk"]
-atlas = ExtResource("1_57vct")
-region = Rect2(0, 0, 32, 32)
+[ext_resource type="Texture2D" uid="uid://ihxyrtnd20bk" path="res://assets/characters/player/Pepin.png" id="2_1crxk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c3488"]
-atlas = ExtResource("1_57vct")
-region = Rect2(32, 0, 32, 32)
+atlas = ExtResource("2_1crxk")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o4jik"]
+atlas = ExtResource("2_1crxk")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q053g"]
+atlas = ExtResource("2_1crxk")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pabyu"]
+atlas = ExtResource("2_1crxk")
+region = Rect2(256, 0, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_o4jik"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_1crxk")
+"texture": SubResource("AtlasTexture_c3488")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_c3488")
+"texture": SubResource("AtlasTexture_o4jik")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q053g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pabyu")
 }],
 "loop": true,
-"name": &"default",
-"speed": 5.0
+"name": &"default_enemy",
+"speed": 6.0
 }]
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_1crxk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_o4jik")
+animation = &"default_enemy"
+autoplay = "default_enemy"
+frame_progress = 0.9615044

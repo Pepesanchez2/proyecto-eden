@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b8a10iyc8d0qx" path="res://assets/level/dirt_full_new.png" id="1_mn00y"]
 [ext_resource type="PackedScene" uid="uid://b4kxx5satbfoq" path="res://scenes/characters/player/pepin.tscn" id="2_k3rtj"]
-[ext_resource type="PackedScene" uid="uid://b5ryocs25ehvb" path="res://scenes/characters/enemy/enemy.tscn" id="3_p0fye"]
+[ext_resource type="Script" uid="uid://bvota83cymjkh" path="res://scenes/levels/Spawner.cs" id="5_5n3p8"]
 
 [node name="World" type="Node2D"]
 
@@ -20,6 +20,6 @@ Speed = 100.0
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(2.1, 2.1)
 
-[node name="Enemy" parent="." instance=ExtResource("3_p0fye")]
-texture_filter = 1
-position = Vector2(2, -294)
+[node name="Spawner" type="Node2D" parent="." groups=["enemies"]]
+position = Vector2(-100, -307)
+script = ExtResource("5_5n3p8")

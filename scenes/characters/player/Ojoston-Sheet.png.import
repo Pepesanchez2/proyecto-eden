@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0f22iru47mth"
-path="res://.godot/imported/kolbold_weak.png-8151d93488c0f2c3211d670010bcae26.ctex"
+uid="uid://dylvk7omyt3sr"
+path="res://.godot/imported/Ojoston-Sheet.png-40dcfcea1b5b032527e3ee104a98e7af.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/enemys/kolbold_weak.png"
-dest_files=["res://.godot/imported/kolbold_weak.png-8151d93488c0f2c3211d670010bcae26.ctex"]
+source_file="res://scenes/characters/player/Ojoston-Sheet.png"
+dest_files=["res://.godot/imported/Ojoston-Sheet.png-40dcfcea1b5b032527e3ee104a98e7af.ctex"]
 
 [params]
 

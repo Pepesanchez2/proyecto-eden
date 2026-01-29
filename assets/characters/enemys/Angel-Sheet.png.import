@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://diyriqj1k80ke"
-path="res://.godot/imported/player_sprite.png-503ffcb6249114c09a2effbcdb80c8cc.ctex"
+uid="uid://mskdu7hj7ikx"
+path="res://.godot/imported/Angel-Sheet.png-82b514574eb86b9a6dc5b35712b6001d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/player/player_sprite.png"
-dest_files=["res://.godot/imported/player_sprite.png-503ffcb6249114c09a2effbcdb80c8cc.ctex"]
+source_file="res://assets/characters/enemys/Angel-Sheet.png"
+dest_files=["res://.godot/imported/Angel-Sheet.png-82b514574eb86b9a6dc5b35712b6001d.ctex"]
 
 [params]
 
