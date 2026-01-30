@@ -16,6 +16,22 @@ public partial class Spawner : Node2D
 	[Export]
 	public int MaxEnemies = 10;
 
+	// Opcional: usar oleadas
+	[Export]
+	public bool UseWaves = true;
+
+	[Export]
+	public float WaveDuration = 20.0f;
+
+	[Export]
+	public float TimeBetweenWaves = 8.0f;
+
+	private int currentWave = 0;
+
+	private float waveTimer = 0f;
+
+	private bool inWave = false;
+
 	// Distancias mínima y máxima desde el jugador donde aparecerán los enemigos
 	[Export]
 	public float MinDistance = 800.0f;
@@ -62,6 +78,14 @@ public partial class Spawner : Node2D
 
 		if (enemiesParent == null)
 			enemiesParent = GetParent();
+
+		// Inicializar sistema de oleadas
+		if (UseWaves)
+		{
+			currentWave = 1;
+			inWave = true;
+			waveTimer = WaveDuration;
+		}
 
 		// Si no hay enemigos configurados en el inspector, intentar cargar todas las escenas
 		// dentro de res://scenes/characters/enemy/ y usarlas como opciones por defecto.
@@ -121,6 +145,26 @@ public partial class Spawner : Node2D
 		if (player == null)
 			return;
 
+		// manejar temporizador de oleadas
+		if (UseWaves)
+		{
+			waveTimer -= (float)delta;
+			if (waveTimer <= 0f)
+			{
+				if (inWave)
+				{
+					inWave = false;
+					waveTimer = TimeBetweenWaves;
+				}
+				else
+				{
+					currentWave += 1;
+					inWave = true;
+					waveTimer = WaveDuration;
+				}
+			}
+		}
+
 		timer += (float)delta;
 		if (timer < SpawnInterval)
 			return;
@@ -132,8 +176,17 @@ public partial class Spawner : Node2D
 		if (current >= MaxEnemies)
 			return;
 
+		// si usamos oleadas, solo spawnear durante la oleada
+		if (UseWaves && !inWave)
+			return;
+
 		SpawnEnemy();
 	}
+
+	// Propiedades públicas para la UI
+	public int CurrentWave => currentWave;
+	public float WaveTimeLeft => waveTimer;
+	public bool IsInWave => inWave;
 
 	private void SpawnEnemy()
 	{

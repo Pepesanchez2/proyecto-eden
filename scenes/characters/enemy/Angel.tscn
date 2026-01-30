@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://b5ryocs25ehvb"]
+[gd_scene load_steps=11 format=3 uid="uid://b5ryocs25ehvb"]
 
 [ext_resource type="Script" uid="uid://b5laiwworcuwa" path="res://scripts/characters/enemy/Angel.cs" id="1_7vsc1"]
 [ext_resource type="Texture2D" uid="uid://mskdu7hj7ikx" path="res://assets/characters/enemys/Angel-Sheet.png" id="2_7jlhe"]
@@ -53,6 +53,9 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7vsc1"]
+size = Vector2(25, 25)
+
 [node name="Angel" type="CharacterBody2D" groups=["enemies"]]
 script = ExtResource("1_7vsc1")
 
@@ -62,3 +65,7 @@ sprite_frames = SubResource("SpriteFrames_pwjhn")
 animation = &"default_enemy"
 autoplay = "default_enemy"
 frame_progress = 0.65114206
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -1.5)
+shape = SubResource("RectangleShape2D_7vsc1")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bscfovm50pfe0"]
+[gd_scene load_steps=14 format=3 uid="uid://bscfovm50pfe0"]
 
 [ext_resource type="Script" uid="uid://c30ch477m2iu6" path="res://scripts/characters/enemy/Jesucristo.cs" id="1_7cw33"]
 [ext_resource type="Texture2D" uid="uid://dyixtdrymbewe" path="res://assets/characters/enemys/Jesucristo-Sheet.png" id="1_cg3h2"]
@@ -74,6 +74,9 @@ animations = [{
 "speed": 8.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7cw33"]
+size = Vector2(27.5, 52.5)
+
 [node name="Jesucristo" type="CharacterBody2D" groups=["enemies"]]
 script = ExtResource("1_7cw33")
 
@@ -82,3 +85,7 @@ texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_tpypv")
 autoplay = "default"
 frame_progress = 0.81779915
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3.75, 1.25)
+shape = SubResource("RectangleShape2D_7cw33")
