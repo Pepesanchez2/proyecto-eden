@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class Pepin : CharacterBody2D
+public partial class Player : CharacterBody2D
 {
 	// Velocidad de movimiento en píxeles/segundo
 	[Export]

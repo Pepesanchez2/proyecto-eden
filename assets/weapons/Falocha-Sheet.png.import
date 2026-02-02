@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dylvk7omyt3sr"
-path="res://.godot/imported/Ojoston-Sheet.png-40dcfcea1b5b032527e3ee104a98e7af.ctex"
+uid="uid://dor7svu5v852v"
+path="res://.godot/imported/Falocha-Sheet.png-feeb019dcfea56f20b4a2afdb940c659.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/characters/player/Ojoston-Sheet.png"
-dest_files=["res://.godot/imported/Ojoston-Sheet.png-40dcfcea1b5b032527e3ee104a98e7af.ctex"]
+source_file="res://assets/weapons/Falocha-Sheet.png"
+dest_files=["res://.godot/imported/Falocha-Sheet.png-feeb019dcfea56f20b4a2afdb940c659.ctex"]
 
 [params]
 

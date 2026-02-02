@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ced81k7righdf"
-path="res://.godot/imported/Hafuura aleeksaandar-Sheet.png-9d97a9aa643cde2603b37c2f9b1474d2.ctex"
+uid="uid://dylvk7omyt3sr"
+path="res://.godot/imported/Ojoston-Sheet.png-c2e4de45e0acdd60330770d27ce77179.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/characters/player/Hafuura aleeksaandar-Sheet.png"
-dest_files=["res://.godot/imported/Hafuura aleeksaandar-Sheet.png-9d97a9aa643cde2603b37c2f9b1474d2.ctex"]
+source_file="res://assets/weapons/Ojoston-Sheet.png"
+dest_files=["res://.godot/imported/Ojoston-Sheet.png-c2e4de45e0acdd60330770d27ce77179.ctex"]
 
 [params]
 

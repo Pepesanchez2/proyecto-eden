@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://b4kxx5satbfoq"]
 
-[ext_resource type="Script" uid="uid://djogeovpnsqbp" path="res://scripts/characters/player/Pepin.cs" id="1_1crxk"]
+[ext_resource type="Script" uid="uid://djogeovpnsqbp" path="res://scripts/characters/player/Player.cs" id="1_1crxk"]
 [ext_resource type="Texture2D" uid="uid://ihxyrtnd20bk" path="res://assets/characters/player/Pepin.png" id="2_1crxk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c3488"]
@@ -42,7 +42,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1crxk"]
 size = Vector2(18, 25.5)
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_1crxk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

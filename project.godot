@@ -27,6 +27,7 @@ project/assembly_name="Projecto Eden"
 [global_group]
 
 enemies="Grupo de enemigos para el spawn"
+player=""
 
 [input]
 
@@ -58,3 +59,6 @@ dash={
 [rendering]
 
 renderer/rendering_method="mobile"
+
+[autoload]
+UI="res://scenes/UI/ui.tscn"

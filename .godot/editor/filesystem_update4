@@ -1,3 +1,9 @@
-res://scenes/levels/Level.tscn
+res://scenes/characters/player/Player.tscn
+res://scripts/characters/enemy/Angel.cs
+res://scripts/characters/enemy/GabeNewel.cs
+res://scripts/characters/enemy/Jesucristo.cs
+res://scripts/characters/enemy/Spawner.cs
+res://scripts/characters/player/Player.cs
+res://scripts/ui/InLevelUI.cs
+res://scenes/UI/ui.tscn
 res://scenes/levels/cielo.tscn
-res://scenes/levels/infierno.tscn

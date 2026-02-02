@@ -8,6 +8,14 @@ public partial class Angel : CharacterBody2D
     public float Speed = 80f;
 
     [Export]
+    public int MaxHealth = 3;
+
+    public int Health;
+
+    [Export]
+    public int XPOnDeath = 10;
+
+    [Export]
     public float AttackRange = 20.0f;
 
     [Export]
@@ -39,12 +47,19 @@ public partial class Angel : CharacterBody2D
 
         // Añadir este enemigo al grupo 'enemies' para que el Spawner pueda contarlos
         AddToGroup("enemies");
+
+        Health = MaxHealth;
     }
 
     public override void _PhysicsProcess(double delta)
     {
-        if (player == null)
-            return;
+        // Verificar referencia válida al jugador (puede ser liberado)
+        if (player == null || !Godot.GodotObject.IsInstanceValid(player))
+        {
+            player = GetTree().GetFirstNodeInGroup("player") as Node2D;
+            if (player == null || !Godot.GodotObject.IsInstanceValid(player))
+                return;
+        }
 
         // Dirección base hacia el jugador
         Vector2 baseDir = (player.GlobalPosition - GlobalPosition);
@@ -92,7 +107,7 @@ public partial class Angel : CharacterBody2D
             attackTimer -= (float)delta;
 
         // Si estamos lo bastante cerca del jugador, aplicar daño y separarnos un poco
-        if (player != null)
+        if (player != null && Godot.GodotObject.IsInstanceValid(player))
         {
             float dist = GlobalPosition.DistanceTo(player.GlobalPosition);
             if (dist <= AttackRange && attackTimer <= 0f)
@@ -116,6 +131,27 @@ public partial class Angel : CharacterBody2D
                 Vector2 away = (GlobalPosition - player.GlobalPosition).Normalized();
                 GlobalPosition += away * 6.0f;
             }
+        }
+
+        // verificar salud
+        if (Health <= 0)
+        {
+            // dar XP al jugador si existe AddXP
+            if (player != null)
+            {
+                try
+                {
+                    var meth = player.GetType().GetMethod("AddXP");
+                    if (meth != null)
+                    {
+                        meth.Invoke(player, new object[] { XPOnDeath });
+                    }
+                }
+                catch { }
+            }
+
+            QueueFree();
+            return;
         }
     }
 }

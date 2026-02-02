@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ba3akbirsfmbq"
-path="res://.godot/imported/Ricochet-Sheet.png-203f44b7c901acb84e23497ae5d9898d.ctex"
+path="res://.godot/imported/Ricochet-Sheet.png-736aea3837cd78aefe0bd2051dd34df7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/characters/player/Ricochet-Sheet.png"
-dest_files=["res://.godot/imported/Ricochet-Sheet.png-203f44b7c901acb84e23497ae5d9898d.ctex"]
+source_file="res://assets/weapons/Ricochet-Sheet.png"
+dest_files=["res://.godot/imported/Ricochet-Sheet.png-736aea3837cd78aefe0bd2051dd34df7.ctex"]
 
 [params]
 
