@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://csj84xrsnrowv"]
+
+[ext_resource type="Texture2D" uid="uid://b8a10iyc8d0qx" path="res://assets/level/dirt_full_new.png" id="1_cjis5"]
+[ext_resource type="PackedScene" uid="uid://b4kxx5satbfoq" path="res://scenes/characters/player/pepin.tscn" id="2_wue8p"]
+[ext_resource type="PackedScene" uid="uid://bg4u7ifgsd0b6" path="res://scenes/UI/ui.tscn" id="3_hno4l"]
+[ext_resource type="Script" uid="uid://bvota83cymjkh" path="res://scripts/characters/enemy/Spawner.cs" id="4_vqxcy"]
+
+[node name="Infierno" type="Node2D"]
+
+[node name="Backgorund" type="Sprite2D" parent="."]
+texture_filter = 1
+texture_repeat = 2
+texture = ExtResource("1_cjis5")
+region_enabled = true
+region_rect = Rect2(-4000, -4000, 4000, 4000)
+
+[node name="Player" parent="." instance=ExtResource("2_wue8p")]
+texture_filter = 1
+Speed = 100.0
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(2.1, 2.1)
+
+[node name="UI" parent="Player/Camera2D" instance=ExtResource("3_hno4l")]
+metadata/_edit_use_anchors_ = true
+
+[node name="Spawner" type="Node2D" parent="." groups=["enemies"]]
+position = Vector2(-100, -307)
+script = ExtResource("4_vqxcy")
