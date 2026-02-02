@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8a10iyc8d0qx"
-path="res://.godot/imported/dirt_full_new.png-adc6fde8d47db59be69ae8c95733ca6d.ctex"
+uid="uid://dfsgc40a3xwu1"
+path="res://.godot/imported/Cielo.png-fb7700ffaacc555ffa0eee40a477a1c7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/level/dirt_full_new.png"
-dest_files=["res://.godot/imported/dirt_full_new.png-adc6fde8d47db59be69ae8c95733ca6d.ctex"]
+source_file="res://assets/level/Cielo.png"
+dest_files=["res://.godot/imported/Cielo.png-fb7700ffaacc555ffa0eee40a477a1c7.ctex"]
 
 [params]
 
