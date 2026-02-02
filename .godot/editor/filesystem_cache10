@@ -3,14 +3,16 @@
 README.md::TextFile::-1::1769099830::0::1::::<><><>0<>0<><>::
 ::res://assets/::1770043268
 ::res://assets/characters/::1769710663
-::res://assets/characters/enemys/::1769782555
+::res://assets/characters/enemys/::1770051663
 Angel-Sheet.png::CompressedTexture2D::880038550770930427::1769710663::1769710663::1::::<><><>0<>0<>b2556e129fc2c990199818dcf24264ae<>res://.godot/imported/Angel-Sheet.png-82b514574eb86b9a6dc5b35712b6001d.ctex::
 Gabe Newel-Sheet.png::CompressedTexture2D::8539873263849664195::1769782555::1769782555::1::::<><><>0<>0<>67a7180ae3c24a093ad1f0247ea9c026<>res://.godot/imported/Gabe Newel-Sheet.png-ec6cbc0d5f357027d72cfb6fbde0e9a4.ctex::
 Jesucristo-Sheet.png::CompressedTexture2D::8861739926280636680::1769710663::1769710663::1::::<><><>0<>0<>f70dd8214fce6452350c29129048ceda<>res://.godot/imported/Jesucristo-Sheet.png-ddb4082e04826a2bd828bfc94e6b9d4d.ctex::
+Pepin_alterego.png::CompressedTexture2D::1452890767181073836::1770051663::1770051664::1::::<><><>0<>0<>7f9160c1627890a93f1b051ef88c6773<>res://.godot/imported/Pepin_alterego.png-d94549fdefc532a4be84835c02d1f6d9.ctex::
+sombra.png::CompressedTexture2D::7652342410048648624::1770051663::1770051664::1::::<><><>0<>0<>203050efeee99f5afc0e91066510656d<>res://.godot/imported/sombra.png-59492b39502ed418c282f464db59c667.ctex::
 ::res://assets/characters/player/::1769710663
 Pepin.png::CompressedTexture2D::577401666114019704::1769710663::1769710663::1::::<><><>0<>0<>c114f1b232e7717d09ad7d806578512c<>res://.godot/imported/Pepin.png-3c20422941df0d048d7498147dad9c63.ctex::
-::res://assets/level/::1770049392
-Cielo.png::CompressedTexture2D::7547734504222561746::1770049392::1770049392::1::::<><><>0<>0<>b00780b7be434faa3fc71fa7f0673943<>res://.godot/imported/Cielo.png-fb7700ffaacc555ffa0eee40a477a1c7.ctex::
+::res://assets/level/::1770049397
+Cielo.png::CompressedTexture2D::7547734504222561746::1770049397::1770049392::1::::<><><>0<>0<>b00780b7be434faa3fc71fa7f0673943<>res://.godot/imported/Cielo.png-fb7700ffaacc555ffa0eee40a477a1c7.ctex::
 Infierno.png::CompressedTexture2D::2444010984756977889::1770048900::1770048900::1::::<><><>0<>0<>d51ce3dcce3a364a421dce5e2eb69021<>res://.godot/imported/Infierno.png-9112d7bed7bab8a8398edf873f14e745.ctex::
 ::res://assets/obstacles/::1769100469
 ::res://assets/weapons/::1770043296
@@ -21,15 +23,15 @@ Ricochet-Sheet.png::CompressedTexture2D::2444241184424275914::1769104954::177004
 ::res://assets/weapons/proyectil/::1770043288
 ::res://scenes/::1769710663
 ::res://scenes/characters/::1769710663
-::res://scenes/characters/enemy/::1769783558
+::res://scenes/characters/enemy/::1770051587
 Angel.tscn::PackedScene::4528662757714344775::1769783443::0::1::::<><><>0<>0<><>::uid://b5laiwworcuwa::::res://scripts/characters/enemy/Angel.cs<>uid://mskdu7hj7ikx::::res://assets/characters/enemys/Angel-Sheet.png
 GabeNewel.tscn::PackedScene::3171005569924200924::1769783558::0::1::::<><><>0<>0<><>::uid://dtw1p2q72pamd::::res://assets/characters/enemys/Gabe Newel-Sheet.png<>uid://daxck8xkjeurr::::res://scripts/characters/enemy/GabeNewel.cs
-Jesucristo.tscn::PackedScene::3654278333689377021::1769783501::0::1::::<><><>0<>0<><>::uid://c30ch477m2iu6::::res://scripts/characters/enemy/Jesucristo.cs<>uid://dyixtdrymbewe::::res://assets/characters/enemys/Jesucristo-Sheet.png
+Jesucristo.tscn::PackedScene::3654278333689377021::1770051587::0::1::::<><><>0<>0<><>::uid://c30ch477m2iu6::::res://scripts/characters/enemy/Jesucristo.cs<>uid://dyixtdrymbewe::::res://assets/characters/enemys/Jesucristo-Sheet.png
 ::res://scenes/characters/player/::1770043955
 Player.tscn::PackedScene::4443980094362499000::1770043955::0::1::::<><><>0<>0<><>::uid://djogeovpnsqbp::::res://scripts/characters/player/Player.cs<>uid://ihxyrtnd20bk::::res://assets/characters/player/Pepin.png
-::res://scenes/levels/::1770049113
-cielo.tscn::PackedScene::5182400970183637938::1770047953::0::1::::<><><>0<>0<><>::uid://b4kxx5satbfoq::::res://scenes/characters/player/Player.tscn<>uid://bvota83cymjkh::::res://scripts/characters/enemy/Spawner.cs
-infierno.tscn::PackedScene::6056876636576481809::1770049113::0::1::::<><><>0<>0<><>::uid://ba25repdrkbvt::::res://assets/level/Infierno.png<>uid://b4kxx5satbfoq::::res://scenes/characters/player/Player.tscn<>uid://bvota83cymjkh::::res://scripts/characters/enemy/Spawner.cs
+::res://scenes/levels/::1770049706
+cielo.tscn::PackedScene::5182400970183637938::1770049423::0::1::::<><><>0<>0<><>::uid://dfsgc40a3xwu1::::res://assets/level/Cielo.png<>uid://b4kxx5satbfoq::::res://scenes/characters/player/Player.tscn<>uid://bvota83cymjkh::::res://scripts/characters/enemy/Spawner.cs
+infierno.tscn::PackedScene::6056876636576481809::1770049706::0::1::::<><><>0<>0<><>::uid://ba25repdrkbvt::::res://assets/level/Infierno.png<>uid://b4kxx5satbfoq::::res://scenes/characters/player/Player.tscn<>uid://bvota83cymjkh::::res://scripts/characters/enemy/Spawner.cs
 ::res://scenes/UI/::1769793653
 ui.tscn::PackedScene::2868692613856951517::1770044663::0::1::::<><><>0<>0<><>::uid://dvv44pevmjam3::::res://scripts/ui/InLevelUI.cs
 ::res://scripts/::1769785145

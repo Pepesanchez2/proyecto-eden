@@ -73,7 +73,7 @@ texture = ExtResource("1_btcib")
 [sub_resource type="TileSet" id="TileSet_uh44s"]
 sources/0 = SubResource("TileSetAtlasSource_er7wg")
 
-[node name="Cielo" type="Node2D"]
+[node name="Cielo" type="Node2D" groups=["enemies"]]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 tile_set = SubResource("TileSet_uh44s")
@@ -88,7 +88,4 @@ zoom = Vector2(2.1, 2.1)
 [node name="Spawner" type="Node2D" parent="." groups=["enemies"]]
 position = Vector2(-100, -307)
 script = ExtResource("4_6p4kj")
-
-[node name="Spawner2" type="Node2D" parent="." groups=["enemies"]]
-position = Vector2(-100, -307)
-script = ExtResource("4_6p4kj")
+PlayerPath = NodePath("../Player")

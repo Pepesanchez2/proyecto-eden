@@ -39,6 +39,7 @@ public partial class Angel : CharacterBody2D
     public float RandomAngleDeg = 10.0f;
 
     private Node2D player;
+    private AnimatedSprite2D anim;
 
     public override void _Ready()
     {
@@ -49,6 +50,9 @@ public partial class Angel : CharacterBody2D
         AddToGroup("enemies");
 
         Health = MaxHealth;
+
+        // intentar obtener el AnimatedSprite2D para poder hacer flip según dirección
+        anim = GetNodeOrNull<AnimatedSprite2D>("AnimatedSprite2D");
     }
 
     public override void _PhysicsProcess(double delta)
@@ -101,6 +105,13 @@ public partial class Angel : CharacterBody2D
         Velocity = combined * Speed;
 
         MoveAndSlide();
+
+        // ajustar flip horizontal si tenemos animación
+        if (anim != null)
+        {
+            if (Mathf.Abs(Velocity.X) > 0.1f)
+                anim.FlipH = Velocity.X < 0f;
+        }
 
         // temporizador de ataque
         if (attackTimer > 0f)

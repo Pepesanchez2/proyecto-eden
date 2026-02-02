@@ -1,2 +1,14 @@
 res://scenes/levels/infierno.tscn
 res://scenes/levels/cielo.tscn
+res://scripts/characters/enemy/GabeNewel.cs
+res://scripts/characters/enemy/Spawner.cs
+res://scripts/characters/player/Player.cs
+res://scripts/characters/enemy/Jesucristo.cs
+res://scripts/ui/InLevelUI.cs
+res://scripts/characters/enemy/Angel.cs
+res://scenes/characters/enemy/Jesucristo.tscn
+res://scripts/characters/enemy/Sombra.cs
+res://scenes/characters/enemy/sombra.tscn
+res://scripts/characters/enemy/AlterEgo.cs
+res://scenes/characters/enemy/AlterEgo.tscn
+res://scenes/characters/enemy/GabeNewel.tscn

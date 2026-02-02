@@ -32,6 +32,11 @@ public partial class Spawner : Node2D
 
 	private bool inWave = false;
 
+	// Grupo de enemigos que queremos contar/spawnear (por nivel)
+	// Si se deja vacío, se detectará automáticamente según el nombre de la escena (cielo/infierno)
+	[Export]
+	public string EnemyGroup = "";
+
 	// Distancias mínima y máxima desde el jugador donde aparecerán los enemigos
 	[Export]
 	public float MinDistance = 800.0f;
@@ -87,6 +92,36 @@ public partial class Spawner : Node2D
 			waveTimer = WaveDuration;
 		}
 
+		// Si no se especificó EnemyGroup, intentar detectarlo por el nombre de la escena
+		if (string.IsNullOrEmpty(EnemyGroup))
+		{
+			var cs = GetTree().CurrentScene;
+			if (cs != null)
+			{
+				var nameStr = cs.Name.ToString();
+				if (!string.IsNullOrEmpty(nameStr))
+				{
+					var n = nameStr.ToLowerInvariant();
+					if (n.Contains("cielo"))
+					{
+						EnemyGroup = "enemies";
+					}
+					else if (n.Contains("infierno") || n.Contains("hell"))
+					{
+						EnemyGroup = "enemies_hell";
+					}
+					else
+					{
+						EnemyGroup = "enemies"; // default
+					}
+				}
+				else
+				{
+					EnemyGroup = "enemies";
+				}
+				GD.Print($"Spawner: usando EnemyGroup = {EnemyGroup}");
+			}
+
 		// Si no hay enemigos configurados en el inspector, intentar cargar todas las escenas
 		// dentro de res://scenes/characters/enemy/ y usarlas como opciones por defecto.
 		if (EnemyScenes == null || EnemyScenes.Length == 0)
@@ -138,7 +173,7 @@ public partial class Spawner : Node2D
 				}
 			}
 		}
-	}
+	}}
 
 	public override void _Process(double delta)
 	{

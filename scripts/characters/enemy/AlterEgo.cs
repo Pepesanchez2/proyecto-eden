@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class Jesucristo : CharacterBody2D
+public partial class AlterEgo : CharacterBody2D
 {
     [Export]
     public float Speed = 80f;
@@ -35,7 +35,7 @@ public partial class Jesucristo : CharacterBody2D
         player = GetTree().GetFirstNodeInGroup("player") as Node2D;
 
         // Añadir este enemigo al grupo 'enemies' para que el Spawner pueda contarlos
-        AddToGroup("enemies");
+        AddToGroup("enemies_hell");
 
         Health = MaxHealth;
 
@@ -61,7 +61,7 @@ public partial class Jesucristo : CharacterBody2D
         if (anim != null)
         {
             if (Mathf.Abs(Velocity.X) > 0.1f)
-                anim.FlipH = Velocity.X > 0f;
+                anim.FlipH = Velocity.X < 0f;
         }
 
         // ataque por contacto
@@ -83,7 +83,6 @@ public partial class Jesucristo : CharacterBody2D
             Vector2 away = (GlobalPosition - player.GlobalPosition).Normalized();
             GlobalPosition += away * 4.0f;
         }
-        
     }
 
     public void ApplyDamage(int amount)

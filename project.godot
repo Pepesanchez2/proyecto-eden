@@ -32,6 +32,7 @@ project/assembly_name="Projecto Eden"
 
 enemies="Grupo de enemigos para el spawn"
 player=""
+enemies_hell=""
 
 [input]
 

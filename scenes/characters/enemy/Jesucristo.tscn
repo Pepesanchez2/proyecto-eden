@@ -75,10 +75,12 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7cw33"]
-size = Vector2(27.5, 52.5)
+size = Vector2(21, 35)
 
 [node name="Jesucristo" type="CharacterBody2D" groups=["enemies"]]
 script = ExtResource("1_7cw33")
+AttackDamage = 3
+AttackCooldown = 1.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1

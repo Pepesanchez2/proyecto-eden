@@ -1,6 +1,6 @@
-res://scenes/levels
-res://scripts/characters/enemy
 res://scenes/characters/enemy
 res://assets/characters/enemys
+res://scripts/characters/enemy
+res://scenes/levels
 res://assets/characters/player
 res://scenes/UI

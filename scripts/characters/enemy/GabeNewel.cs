@@ -27,6 +27,7 @@ public partial class GabeNewel : CharacterBody2D
     private float attackTimer = 0f;
 
     private Node2D player;
+    private AnimatedSprite2D anim;
 
     public override void _Ready()
     {
@@ -37,6 +38,8 @@ public partial class GabeNewel : CharacterBody2D
         AddToGroup("enemies");
 
         Health = MaxHealth;
+
+        anim = GetNodeOrNull<AnimatedSprite2D>("AnimatedSprite2D");
     }
 
     public override void _PhysicsProcess(double delta)
@@ -54,6 +57,12 @@ public partial class GabeNewel : CharacterBody2D
 
         Velocity = direction * Speed;
         MoveAndSlide();
+
+        if (anim != null)
+        {
+            if (Mathf.Abs(Velocity.X) > 0.1f)
+                anim.FlipH = Velocity.X < 0f;
+        }
 
         // ataque por contacto (aplica daño mientras esté cerca en intervalos)
         if (attackTimer > 0f)
