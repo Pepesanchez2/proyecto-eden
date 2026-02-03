@@ -51,12 +51,16 @@ size = Vector2(21, 35)
 
 [node name="AlterEgo" type="CharacterBody2D" groups=["enemies_hell"]]
 script = ExtResource("1_miy7r")
+Speed = 100.0
+MaxHealth = 300
+AttackDamage = 2
+AttackCooldown = 1.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_uku48")
 autoplay = "default"
-frame_progress = 0.12930164
+frame_progress = 0.974955
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 4)

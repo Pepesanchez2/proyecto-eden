@@ -28,6 +28,18 @@ public partial class InLevelUI : Control
 
 	public override void _Process(double delta)
 	{
+		// Ocultar UI en escenas de menú/pausa: detectar por nombre de la escena
+		var cs = GetTree().CurrentScene;
+		string sceneName = cs != null ? cs.Name.ToString().ToLowerInvariant() : "";
+		if (sceneName.Contains("menu") || sceneName.Contains("pause") || sceneName.Contains("main"))
+		{
+			this.Visible = false;
+			return;
+		}
+		else
+		{
+			this.Visible = true;
+		}
 		var viewport = GetViewport();
 
 		// actualizar información de oleada

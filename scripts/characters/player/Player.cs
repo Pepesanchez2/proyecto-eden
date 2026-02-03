@@ -48,6 +48,12 @@ public partial class Player : CharacterBody2D
 
 	public int XP = 0;
 
+	// Armas que posee el jugador (nombres)
+	public System.Collections.Generic.List<string> OwnedWeapons = new System.Collections.Generic.List<string>();
+
+	// niveles de mejora por arma
+	private System.Collections.Generic.Dictionary<string, int> weaponLevels = new System.Collections.Generic.Dictionary<string, int>();
+
 	[Export]
 	public int XPToNextLevel = 100;
 	public override void _Ready()
@@ -178,13 +184,82 @@ public partial class Player : CharacterBody2D
 	public void AddXP(int amount)
 	{
 		XP += amount;
+		// procesar nivelado, pero mostrar la UI una vez por nivel y pausar para selección
 		while (XP >= XPToNextLevel)
 		{
 			XP -= XPToNextLevel;
 			Level += 1;
 			// aumentar progresivamente requisito (ejemplo simple)
 			XPToNextLevel = (int)(XPToNextLevel * 1.2f);
-			// puedes añadir efectos de subir de nivel aquí
+			// mostrar UI de elección de mejora y pausar el juego
+			try
+			{
+				var uiRoot = GetTree().Root.GetNode("UI");
+				if (uiRoot != null && uiRoot.HasNode("LevelUpPanel"))
+				{
+					var panel = uiRoot.GetNode("LevelUpPanel");
+					if (panel != null)
+						panel.Call("ShowLevelUp");
+				}
+				// pausar la escena (LevelUpUI también hará SetPaused true)
+				GetTree().Paused = true;
+			}
+			catch { }
+			// parar aquí para esperar la selección; no procesar niveles adicionales hasta que el jugador elija
+			break;
 		}
+	}
+
+	// Llamado por la UI cuando el jugador selecciona una opción
+	public void OnLevelUpChoice(string choice)
+	{
+		if (string.IsNullOrEmpty(choice))
+			return;
+		// formato: "Upgrade:Colt" o "New:Colt"
+		if (choice.StartsWith("Upgrade:"))
+		{
+			var name = choice.Substring(8);
+			// intentar encontrar una instancia de arma en el jugador
+			foreach (var child in GetChildren())
+			{
+				if (child is Node nd && nd.GetType().Name == name)
+				{
+					try
+					{
+						var meth = nd.GetType().GetMethod("ApplyUpgrade");
+						if (meth != null)
+							meth.Invoke(nd, new object[] { });
+						// registrar nivel interno
+						if (!weaponLevels.ContainsKey(name)) weaponLevels[name] = 1;
+						else weaponLevels[name] += 1;
+					}
+					catch { }
+				}
+			}
+		}
+		else if (choice.StartsWith("New:"))
+		{
+			var name = choice.Substring(4);
+			// instanciar escena por convención res://scenes/weapons/{name}.tscn
+			try
+			{
+				var path = $"res://scenes/weapons/{name.ToLower()}.tscn";
+				var ps = ResourceLoader.Load<PackedScene>(path);
+				if (ps != null)
+				{
+					var inst = ps.Instantiate();
+					if (inst is Node nd)
+					{
+						AddChild(nd);
+						OwnedWeapons.Add(name);
+						weaponLevels[name] = 0;
+					}
+				}
+			}
+			catch { }
+		}
+
+		// Despausar el juego
+		GetTree().Paused = false;
 	}
 }

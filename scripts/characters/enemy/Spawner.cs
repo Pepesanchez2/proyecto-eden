@@ -206,8 +206,9 @@ public partial class Spawner : Node2D
 
 		timer = 0f;
 
-		// Contar enemigos activos por grupo 'enemies'
-		var current = GetTree().GetNodesInGroup("enemies").Count;
+		// Contar enemigos activos por el grupo configurado (por nivel)
+		var groupToCount = string.IsNullOrEmpty(EnemyGroup) ? "enemies" : EnemyGroup;
+		var current = GetTree().GetNodesInGroup(groupToCount).Count;
 		if (current >= MaxEnemies)
 			return;
 
@@ -228,27 +229,46 @@ public partial class Spawner : Node2D
 		if (EnemyScenes == null || EnemyScenes.Length == 0)
 			return;
 
-		int idx = (int)(GD.Randf() * EnemyScenes.Length);
-		if (idx < 0) idx = 0;
-		if (idx >= EnemyScenes.Length) idx = EnemyScenes.Length - 1;
+		int maxAttempts = Math.Max(3, EnemyScenes.Length * 3);
+		for (int attempt = 0; attempt < maxAttempts; attempt++)
+		{
+			int idx = (int)(GD.Randf() * EnemyScenes.Length);
+			if (idx < 0) idx = 0;
+			if (idx >= EnemyScenes.Length) idx = EnemyScenes.Length - 1;
 
-		var scene = EnemyScenes[idx];
-		if (scene == null)
+			var scene = EnemyScenes[idx];
+			if (scene == null)
+				continue;
+
+			var inst = scene.Instantiate<Node2D>();
+
+			// Generar posición aleatoria fuera de la zona cercana al jugador
+			float angle = GD.Randf() * (float)(Math.PI * 2);
+			float dist = Mathf.Lerp(MinDistance, MaxDistance, GD.Randf());
+			Vector2 spawnPos = player.GlobalPosition + new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)) * dist;
+
+			// Añadir al árbol para que _Ready() de la escena se ejecute y se puedan aplicar grupos
+			if (enemiesParent != null)
+				enemiesParent.AddChild(inst);
+			else
+				AddChild(inst);
+
+			inst.GlobalPosition = spawnPos;
+
+			// Si se configuró EnemyGroup, verificar que la instancia pertenezca a ese grupo
+			if (!string.IsNullOrEmpty(EnemyGroup) && !inst.IsInGroup(EnemyGroup))
+			{
+				// No corresponde al grupo de este nivel: eliminar y seguir intentando
+				inst.QueueFree();
+				continue;
+			}
+
+			// Instancia válida para este nivel
 			return;
+		}
 
-		var inst = scene.Instantiate<Node2D>();
-
-		// Generar posición aleatoria fuera de la zona cercana al jugador
-	float angle = GD.Randf() * (float)(Math.PI * 2);
-		float dist = Mathf.Lerp(MinDistance, MaxDistance, GD.Randf());
-		Vector2 spawnPos = player.GlobalPosition + new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)) * dist;
-
-		if (enemiesParent != null)
-			enemiesParent.AddChild(inst);
-		else
-			AddChild(inst);
-
-		inst.GlobalPosition = spawnPos;
+		// Si no encontramos ninguna escena válida tras varios intentos, no spawnear
+		GD.PrintErr("Spawner: no se encontró escena de enemigo válida para el grupo " + EnemyGroup);
 	}
 
 	// Helper: buscar recursivamente un nodo por nombre

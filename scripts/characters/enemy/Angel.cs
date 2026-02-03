@@ -165,4 +165,61 @@ public partial class Angel : CharacterBody2D
             return;
         }
     }
+
+    public void ApplyDamage(int amount)
+    {
+        // Si el daño proviene de un proyectil (no CaC), 20% de probabilidad de esquivar.
+        // Heurística: buscar nodos de grupos típicos de proyectiles cerca de la posición.
+        try
+        {
+            string[] projGroups = new string[] { "projectiles", "projectile", "bullets", "proyectil" };
+            float detectRadius = 48.0f; // píxeles
+            foreach (var g in projGroups)
+            {
+                var nodes = GetTree().GetNodesInGroup(g);
+                foreach (var n in nodes)
+                {
+                    var nd = n as Node2D;
+                    if (nd == null)
+                        continue;
+                    if (!Godot.GodotObject.IsInstanceValid(nd))
+                        continue;
+                    if (nd.GlobalPosition.DistanceTo(GlobalPosition) <= detectRadius)
+                    {
+                        // Encontrado un proyectil cercano; tirar la probabilidad de esquiva
+                        if (GD.Randf() <= 0.20f)
+                        {
+                            // esquiva
+                            GD.Print("Angel esquivó un proyectil (20%)");
+                            return;
+                        }
+                        // Si no esquiva, proceder con el daño normalmente
+                        goto apply_damage;
+                    }
+                }
+            }
+        }
+        catch { }
+
+        apply_damage:
+        Health = Math.Max(0, Health - amount);
+        if (Health <= 0)
+        {
+            // dar XP al jugador si existe AddXP
+            if (player != null)
+            {
+                try
+                {
+                    var meth = player.GetType().GetMethod("AddXP");
+                    if (meth != null)
+                    {
+                        meth.Invoke(player, new object[] { XPOnDeath });
+                    }
+                }
+                catch { }
+            }
+
+            QueueFree();
+        }
+    }
 }

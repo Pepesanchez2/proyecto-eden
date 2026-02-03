@@ -58,6 +58,8 @@ size = Vector2(25, 25)
 
 [node name="Angel" type="CharacterBody2D" groups=["enemies"]]
 script = ExtResource("1_7vsc1")
+MaxHealth = 150
+AttackCooldown = 1.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1

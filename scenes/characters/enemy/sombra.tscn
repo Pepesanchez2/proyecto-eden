@@ -54,18 +54,21 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7cw33"]
-size = Vector2(21, 35)
+size = Vector2(15, 32)
 
 [node name="Sombra" type="CharacterBody2D" groups=["enemies_hell"]]
 script = ExtResource("1_6oxb3")
+Speed = 100.0
+MaxHealth = 100
+AttackCooldown = 1.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_wh5iv")
 animation = &"default_sombra"
 autoplay = "default_sombra"
-frame_progress = 0.70971
+frame_progress = 0.6849773
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 2)
+position = Vector2(-0.5, 3)
 shape = SubResource("RectangleShape2D_7cw33")

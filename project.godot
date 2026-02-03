@@ -20,7 +20,7 @@ UI="res://scenes/UI/ui.tscn"
 
 [display]
 
-window/size/viewport_width=1920
+window/size/viewport_width=1980
 window/size/viewport_height=1080
 window/size/mode=3
 
@@ -31,8 +31,8 @@ project/assembly_name="Projecto Eden"
 [global_group]
 
 enemies="Grupo de enemigos para el spawn"
-player=""
 enemies_hell=""
+Player=""
 
 [input]
 
