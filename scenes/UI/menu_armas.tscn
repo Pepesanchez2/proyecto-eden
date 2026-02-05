@@ -1,0 +1,167 @@
+[gd_scene load_steps=13 format=3 uid="uid://cq3svo4f7mrxr"]
+
+[ext_resource type="Texture2D" uid="uid://cp2ig2ophthob" path="res://assets/weapons/Falocha.png" id="1_3lj6i"]
+[ext_resource type="Texture2D" uid="uid://48gx43cwlbup" path="res://assets/ui/dc1cd5e2-9978-4586-bd2c-773e9728f053.png" id="1_24sgu"]
+[ext_resource type="Texture2D" uid="uid://bemyprwkshnol" path="res://assets/weapons/Colt.png" id="1_u8dbk"]
+[ext_resource type="Texture2D" uid="uid://da75id68t7qoi" path="res://assets/weapons/sombrero_magico.png" id="2_3t6pl"]
+[ext_resource type="Texture2D" uid="uid://bf7c46djwjet" path="res://assets/weapons/GyroSaber1.png" id="2_f1u7s"]
+[ext_resource type="Script" uid="uid://b2ndele157d1u" path="res://scripts/ui/button_select.cs" id="3_24sgu"]
+[ext_resource type="Texture2D" uid="uid://cvvfhqwyn0y76" path="res://assets/weapons/PuñetazoSimple.png" id="3_xglfg"]
+[ext_resource type="Texture2D" uid="uid://ddw26qrt6md4a" path="res://assets/weapons/Agua Bendita-Sheet.png" id="4_ox4h0"]
+[ext_resource type="Texture2D" uid="uid://46cv6ji4n3v4" path="res://assets/weapons/Baston.png" id="5_qwrn4"]
+[ext_resource type="Script" uid="uid://bo6qu0nnb20rs" path="res://scripts/ui/button_volver.cs" id="5_u8dbk"]
+[ext_resource type="Texture2D" uid="uid://cvwska7oxqttw" path="res://assets/weapons/Ricochet-Sheet.png" id="6_50hkc"]
+[ext_resource type="Texture2D" uid="uid://cqc7wdxv362qy" path="res://assets/weapons/navaja1.png" id="7_pubkc"]
+
+[node name="menu_armas" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="falocha" type="Button" parent="."]
+z_index = 1
+texture_filter = 1
+layout_mode = 0
+offset_left = 809.0
+offset_top = 669.0
+offset_right = 1066.0
+offset_bottom = 823.0
+icon = ExtResource("1_3lj6i")
+icon_alignment = 1
+expand_icon = true
+
+[node name="sombrero" type="Button" parent="."]
+z_index = 1
+texture_filter = 1
+layout_mode = 0
+offset_left = 1280.0
+offset_top = 504.0
+offset_right = 1537.0
+offset_bottom = 658.0
+icon = ExtResource("2_3t6pl")
+icon_alignment = 1
+expand_icon = true
+
+[node name="puñetazo" type="Button" parent="."]
+z_index = 1
+texture_filter = 1
+layout_mode = 0
+offset_left = 964.0
+offset_top = 509.0
+offset_right = 1221.0
+offset_bottom = 663.0
+icon = ExtResource("3_xglfg")
+icon_alignment = 1
+expand_icon = true
+
+[node name="agua" type="Button" parent="."]
+z_index = 1
+texture_filter = 1
+layout_mode = 0
+offset_left = 652.0
+offset_top = 508.0
+offset_right = 909.0
+offset_bottom = 662.0
+icon = ExtResource("4_ox4h0")
+icon_alignment = 1
+expand_icon = true
+
+[node name="baston" type="Button" parent="."]
+z_index = 1
+texture_filter = 1
+layout_mode = 0
+offset_left = 340.0
+offset_top = 509.0
+offset_right = 597.0
+offset_bottom = 663.0
+icon = ExtResource("5_qwrn4")
+icon_alignment = 1
+expand_icon = true
+
+[node name="ricochet" type="Button" parent="."]
+z_index = 1
+texture_filter = 1
+layout_mode = 0
+offset_left = 1277.0
+offset_top = 321.0
+offset_right = 1534.0
+offset_bottom = 475.0
+icon = ExtResource("6_50hkc")
+icon_alignment = 1
+expand_icon = true
+
+[node name="navaja" type="Button" parent="."]
+z_index = 1
+texture_filter = 1
+layout_mode = 0
+offset_left = 961.0
+offset_top = 319.0
+offset_right = 1228.0
+offset_bottom = 473.0
+icon = ExtResource("7_pubkc")
+icon_alignment = 2
+expand_icon = true
+
+[node name="colt" type="Button" parent="."]
+z_index = 1
+texture_filter = 1
+layout_mode = 0
+offset_left = 649.0
+offset_top = 320.0
+offset_right = 908.0
+offset_bottom = 475.0
+icon = ExtResource("1_u8dbk")
+icon_alignment = 1
+expand_icon = true
+
+[node name="gyro" type="Button" parent="."]
+z_index = 1
+texture_filter = 1
+layout_mode = 0
+offset_left = 340.0
+offset_top = 321.0
+offset_right = 598.0
+offset_bottom = 478.0
+icon = ExtResource("2_f1u7s")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = -6.0
+offset_right = 1921.0
+offset_bottom = 1091.0
+texture = ExtResource("1_24sgu")
+
+[node name="select" type="Button" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 1558.0
+offset_top = 908.0
+offset_right = 1798.0
+offset_bottom = 991.0
+action_mode = 0
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("3_24sgu")
+
+[node name="volver" type="Button" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 100.0
+offset_top = 914.0
+offset_right = 341.0
+offset_bottom = 999.0
+action_mode = 0
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_u8dbk")

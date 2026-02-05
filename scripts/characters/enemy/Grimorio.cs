@@ -53,12 +53,20 @@ public partial class Grimorio : CharacterBody2D
 
         anim = GetNodeOrNull<AnimatedSprite2D>("AnimatedSprite2D");
 
-        // intentar cargar escena de proyectil por defecto
+        // intentar cargar escena de proyectil por defecto (protegido contra errores de parseo)
         if (BulletScene == null)
         {
-            var ps = ResourceLoader.Load<PackedScene>("res://scenes/weapons/bullet_grimorio.tscn");
-            if (ps != null)
-                BulletScene = ps;
+            try
+            {
+                var ps = ResourceLoader.Load<PackedScene>("res://scenes/weapons/bullet_grimorio.tscn");
+                if (ps != null)
+                    BulletScene = ps;
+            }
+            catch (Exception e)
+            {
+                GD.PrintErr($"Grimorio: no se pudo cargar bullet_grimorio.tscn: {e.Message}");
+                BulletScene = null;
+            }
         }
 
         shootTimer = ShootInterval;

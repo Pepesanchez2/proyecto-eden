@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Projecto Eden"
-run/main_scene="uid://cf3nnffunaqko"
+run/main_scene="uid://5dfumaprw6w7"
 config/features=PackedStringArray("4.5", "C#", "Mobile")
 
 [autoload]
