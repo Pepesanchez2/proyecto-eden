@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://csj84xrsnrowv"]
+[gd_scene load_steps=7 format=3 uid="uid://csj84xrsnrowv"]
 
 [ext_resource type="Texture2D" uid="uid://ba25repdrkbvt" path="res://assets/level/Infierno.png" id="1_no30e"]
 [ext_resource type="PackedScene" uid="uid://b4kxx5satbfoq" path="res://scenes/characters/player/Player.tscn" id="2_wue8p"]
 [ext_resource type="Script" uid="uid://bvota83cymjkh" path="res://scripts/characters/enemy/Spawner.cs" id="3_vqxcy"]
+[ext_resource type="PackedScene" uid="uid://bg4u7ifgsd0b6" path="res://scenes/ui/ui.tscn" id="4_cjis5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cjis5"]
 texture = ExtResource("1_no30e")
@@ -83,7 +84,7 @@ texture = ExtResource("1_no30e")
 [sub_resource type="TileSet" id="TileSet_pra7s"]
 sources/0 = SubResource("TileSetAtlasSource_cjis5")
 
-[node name="Infierno" type="Node2D" groups=["enemies_hell"]]
+[node name="Infierno" type="Node2D" groups=["UI", "enemies_hell"]]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 tile_set = SubResource("TileSet_pra7s")
@@ -99,3 +100,5 @@ zoom = Vector2(2.1, 2.1)
 position = Vector2(-100, -307)
 script = ExtResource("3_vqxcy")
 PlayerPath = NodePath("../Player")
+
+[node name="UI" parent="." instance=ExtResource("4_cjis5")]

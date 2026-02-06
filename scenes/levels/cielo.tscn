@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cf3nnffunaqko"]
+[gd_scene load_steps=7 format=3 uid="uid://cf3nnffunaqko"]
 
 [ext_resource type="Texture2D" uid="uid://dfsgc40a3xwu1" path="res://assets/level/Cielo.png" id="1_btcib"]
 [ext_resource type="PackedScene" uid="uid://b4kxx5satbfoq" path="res://scenes/characters/player/Player.tscn" id="2_uh44s"]
 [ext_resource type="Script" uid="uid://bvota83cymjkh" path="res://scripts/characters/enemy/Spawner.cs" id="4_6p4kj"]
+[ext_resource type="PackedScene" uid="uid://bg4u7ifgsd0b6" path="res://scenes/ui/ui.tscn" id="4_er7wg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_er7wg"]
 texture = ExtResource("1_btcib")
@@ -73,7 +74,7 @@ texture = ExtResource("1_btcib")
 [sub_resource type="TileSet" id="TileSet_uh44s"]
 sources/0 = SubResource("TileSetAtlasSource_er7wg")
 
-[node name="Cielo" type="Node2D" groups=["enemies"]]
+[node name="Cielo" type="Node2D" groups=["UI", "enemies"]]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 tile_set = SubResource("TileSet_uh44s")
@@ -89,3 +90,5 @@ zoom = Vector2(2.1, 2.1)
 position = Vector2(-100, -307)
 script = ExtResource("4_6p4kj")
 PlayerPath = NodePath("../Player")
+
+[node name="UI" parent="." instance=ExtResource("4_er7wg")]

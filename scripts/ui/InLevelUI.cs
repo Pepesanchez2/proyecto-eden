@@ -12,6 +12,7 @@ public partial class InLevelUI : Control
 	private Node2D player;
 	private Node spawner;
 	private Panel levelUpPanel;
+	private CanvasItem uiRoot;
 
 	public override void _Ready()
 	{
@@ -21,26 +22,19 @@ public partial class InLevelUI : Control
 		levelLabel = GetNodeOrNull<Label>("LevelLabel");
 		healthBar = GetNodeOrNull<ProgressBar>("HealthBar");
 
-		player = GetTree().GetFirstNodeInGroup("player") as Node2D;
-
-		// intentar encontrar Spawner en la escena (por nombre)
-		spawner = FindNodeRecursive(GetTree().Root as Node, "Spawner");
-
-		// encontrar el panel de LevelUp para poder ocultarlo junto al HUD
-		var rootUI = GetTree().Root.GetNodeOrNull("UI");
-		if (rootUI != null)
-		{
-			levelUpPanel = rootUI.GetNodeOrNull("LevelUpPanel") as Panel;
-		}
+		levelUpPanel = GetNodeOrNull<Panel>("LevelUpPanel");
+		// Autoload UI root is this Control instance in our project setup
+		uiRoot = this;
 	}
 
 	public override void _Process(double delta)
 	{
-		// Ocultar UI si no hay jugador en la escena (asume que escenas de menú no tienen grupo 'player')
-		player = GetTree().GetFirstNodeInGroup("player") as Node2D;
-		if (player == null)
+		// Mostrar la UI sólo si la escena actual (CurrentScene) está en el grupo 'UI'
+		var currentScene = GetTree().CurrentScene;
+		bool shouldShow = currentScene != null && currentScene.IsInGroup("UI");
+
+		if (!shouldShow)
 		{
-			// ocultar UIControl y LevelUpPanel si existen
 			this.Visible = false;
 			if (levelUpPanel != null)
 				levelUpPanel.Visible = false;
@@ -52,6 +46,7 @@ public partial class InLevelUI : Control
 			if (levelUpPanel != null)
 				levelUpPanel.Visible = false; // panel solo visible cuando se sube de nivel
 		}
+
 		var viewport = GetViewport();
 
 		// actualizar información de oleada
@@ -63,10 +58,10 @@ public partial class InLevelUI : Control
 			// intentar leer CurrentWave, WaveTimeLeft e IsInWave de forma segura (propiedad o campo)
 			try
 			{
+				var st = spawner.GetType();
 				int cw = 0;
 				float wt = 0f;
 				bool inWave = false;
-				var st = spawner.GetType();
 				var propCW = st.GetProperty("CurrentWave");
 				var propWT = st.GetProperty("WaveTimeLeft");
 				var propIn = st.GetProperty("IsInWave");
@@ -98,6 +93,7 @@ public partial class InLevelUI : Control
 		}
 
 		// actualizar XP/level y health
+		player = GetTree().GetFirstNodeInGroup("player") as Node2D;
 		if (player != null)
 		{
 			var pepin = player as Node;

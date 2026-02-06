@@ -14,10 +14,6 @@ config/name="Projecto Eden"
 run/main_scene="uid://5dfumaprw6w7"
 config/features=PackedStringArray("4.5", "C#", "Mobile")
 
-[autoload]
-
-UI="res://scenes/UI/ui.tscn"
-
 [display]
 
 window/size/viewport_width=1980
@@ -33,6 +29,7 @@ project/assembly_name="Projecto Eden"
 enemies="Grupo de enemigos para el spawn"
 enemies_hell=""
 Player=""
+UI=""
 
 [input]
 
