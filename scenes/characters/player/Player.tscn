@@ -52,6 +52,6 @@ animation = &"default_enemy"
 autoplay = "default_enemy"
 frame_progress = 0.9615044
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 0)
 shape = SubResource("RectangleShape2D_1crxk")

@@ -10,6 +10,7 @@ public partial class InLevelUI : Control
 	private ProgressBar healthBar;
 
 	private Node2D player;
+	private bool healthConnected = false;
 	private Node spawner;
 	private Panel levelUpPanel;
 	private CanvasItem uiRoot;
@@ -96,6 +97,23 @@ public partial class InLevelUI : Control
 		player = GetTree().GetFirstNodeInGroup("player") as Node2D;
 		if (player != null)
 		{
+			// connect to player's HealthChanged signal once so UI updates reactively
+			if (!healthConnected)
+			{
+				try
+				{
+					// connect Godot signal from player to this control
+					var pnode = player as Node;
+					if (pnode != null && pnode.HasMethod("Connect"))
+					{
+						pnode.Connect("HealthChanged", new Callable(this, nameof(OnPlayerHealthChanged)));
+						healthConnected = true;
+					}
+
+				}
+				catch { }
+			}
+
 			var pepin = player as Node;
 			if (pepin != null)
 			{
@@ -151,6 +169,35 @@ public partial class InLevelUI : Control
 					// ignore reflection errors
 				}
 			}
+		}
+
+	}
+
+	// Signal handler for player's health changes
+	private void OnPlayerHealthChanged(int current, int max)
+	{
+		if (healthBar != null)
+		{
+			healthBar.MaxValue = max;
+			healthBar.Value = current;
+		}
+		if (levelLabel != null)
+		{
+			// level may change at the same time - try to update via the player node
+			try
+			{
+				var pnode = GetTree().GetFirstNodeInGroup("player") as Node;
+				if (pnode != null)
+				{
+					var pt = pnode.GetType();
+					var prop = pt.GetProperty("Level");
+					int level = 0;
+					if (prop != null) level = (int)prop.GetValue(pnode);
+					else { var f = pt.GetField("Level"); if (f != null) level = (int)f.GetValue(pnode); }
+					levelLabel.Text = $"Lv {level}";
+				}
+			}
+			catch { }
 		}
 	}
 

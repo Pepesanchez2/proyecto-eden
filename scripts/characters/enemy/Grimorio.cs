@@ -115,35 +115,92 @@ public partial class Grimorio : CharacterBody2D
                     {
                         var b = BulletScene.Instantiate();
                         var bn = b as Node2D;
-                        if (bn != null)
-                        {
-                            bn.GlobalPosition = GlobalPosition;
+                            if (bn != null)
+                            {
+                            // Spawn the bullet slightly in front of the Grimorio so it doesn't start overlapping
+                            // the shooter (which can prevent immediate body_entered events).
+                            float spawnOffset = 12.0f;
+                            bn.GlobalPosition = GlobalPosition + direction * spawnOffset;
                             if (GetParent() != null)
                                 GetParent().AddChild(bn);
                             else
                                 GetTree().Root.AddChild(bn);
 
-                            // inicializar dirección y evitar herir al que dispara
-                            if (bn.HasMethod("Initialize"))
+                            // inicializar dirección y evitar herir al que dispara (llamada tipada si es posible)
+                            // 'direction' (calculated above) holds the normalized direction toward the player
+                            var dir = direction;
+                            // Intentar hacer cast al tipo C# conocido para invocar Initialize directamente
+                            var typed = bn as BulletGrimorio;
+                            if (typed != null)
                             {
-                                var dir = (player.GlobalPosition - GlobalPosition).Normalized();
-                                bn.Call("Initialize", dir, this as Node2D);
-                            }
-
-                            // intentar asignar daño 1 si existe la propiedad
-                            try
-                            {
-                                var prop = bn.GetType().GetProperty("Damage");
-                                if (prop != null && prop.CanWrite)
-                                    prop.SetValue(bn, 1);
-                                else
+                                uint targetLayer = 0;
+                                try {
+                                    var pbody = player as CharacterBody2D;
+                                    if (pbody != null) targetLayer = pbody.CollisionLayer;
+                                } catch { }
+                                typed.Initialize(dir, this as Node2D, targetLayer);
+                                try
                                 {
-                                    var field = bn.GetType().GetField("Damage");
-                                    if (field != null)
-                                        field.SetValue(bn, 1);
+                                    typed.Damage = 1;
                                 }
+                                catch { }
+                                // flip visual depending on direction (left -> flip horizontally)
+                                try
+                                {
+                                    var sprite = typed.GetNodeOrNull<Sprite2D>("Sprite2D");
+                                    if (sprite != null)
+                                        sprite.FlipH = dir.X < 0f;
+                                    else
+                                    {
+                                        var anim = typed.GetNodeOrNull<AnimatedSprite2D>("AnimatedSprite2D");
+                                        if (anim != null)
+                                            anim.FlipH = dir.X < 0f;
+                                    }
+                                }
+                                catch { }
                             }
-                            catch { }
+                            else
+                            {
+                                // Fallback: usar Call si la instancia expone Initialize a Godot
+                                try
+                                {
+                                    if (bn.HasMethod("Initialize"))
+                                    {
+                                        bn.Call("Initialize", dir, this as Node2D);
+                                    }
+                                }
+                                catch { }
+
+                        // also flip fallback sprite if present
+                        try
+                        {
+                            var sprite = bn.GetNodeOrNull<Sprite2D>("Sprite2D");
+                            if (sprite != null)
+                                sprite.FlipH = dir.X < 0f;
+                            else
+                            {
+                                var anim = bn.GetNodeOrNull<AnimatedSprite2D>("AnimatedSprite2D");
+                                if (anim != null)
+                                    anim.FlipH = dir.X < 0f;
+                            }
+                        }
+                        catch { }
+
+                                // intentar asignar daño mediante reflexión como último recurso
+                                try
+                                {
+                                    var prop = bn.GetType().GetProperty("Damage");
+                                    if (prop != null && prop.CanWrite)
+                                        prop.SetValue(bn, 1);
+                                    else
+                                    {
+                                        var field = bn.GetType().GetField("Damage");
+                                        if (field != null)
+                                            field.SetValue(bn, 1);
+                                    }
+                                }
+                                catch { }
+                            }
                         }
                     }
                 }

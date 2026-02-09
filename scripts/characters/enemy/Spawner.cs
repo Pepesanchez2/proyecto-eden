@@ -228,8 +228,13 @@ public partial class Spawner : Node2D
 
 	public override void _Process(double delta)
 	{
-		if (player == null)
-			return;
+		// Ensure player reference is valid (not null and not disposed). If invalid, try to reacquire.
+		if (player == null || !Godot.GodotObject.IsInstanceValid(player))
+		{
+			player = GetTree().GetFirstNodeInGroup("player") as Node2D;
+			if (player == null || !Godot.GodotObject.IsInstanceValid(player))
+				return;
+		}
 
 		// manejar temporizador de oleadas
 		if (UseWaves)
@@ -279,6 +284,14 @@ public partial class Spawner : Node2D
 	{
 		if (EnemyScenes == null || EnemyScenes.Length == 0)
 			return;
+
+		// guard against player being disposed between Process and SpawnEnemy
+		if (player == null || !Godot.GodotObject.IsInstanceValid(player))
+		{
+			player = GetTree().GetFirstNodeInGroup("player") as Node2D;
+			if (player == null || !Godot.GodotObject.IsInstanceValid(player))
+				return;
+		}
 
 		int maxAttempts = Math.Max(3, EnemyScenes.Length * 3);
 		for (int attempt = 0; attempt < maxAttempts; attempt++)

@@ -3,6 +3,9 @@ using System;
 
 public partial class Player : CharacterBody2D
 {
+	[Signal]
+	public delegate void HealthChangedEventHandler(int current, int max);
+
 	// Velocidad de movimiento en píxeles/segundo
 	[Export]
 	public float Speed = 300.0f;
@@ -67,6 +70,8 @@ public partial class Player : CharacterBody2D
 
 		// Inicializar salud
 		Health = MaxHealth;
+	// emitir estado inicial de salud
+	try { EmitSignal("HealthChanged", Health, MaxHealth); } catch { }
 	}
 
 
@@ -173,6 +178,8 @@ public partial class Player : CharacterBody2D
 			return;
 
 		Health = Math.Max(0, Health - amount);
+	// emitir cambio de salud
+	try { EmitSignal("HealthChanged", Health, MaxHealth); } catch { }
 		// Aquí puedes añadir efectos cuando recibe daño (parpadeo, sonido, knockback...)
 		if (Health <= 0)
 		{

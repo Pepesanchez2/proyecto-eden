@@ -1,26 +1,26 @@
 [gd_scene load_steps=10 format=3 uid="uid://bkrgh8olmg8op"]
 
-[ext_resource type="Script" uid="uid://c101f1b7onnbx" path="res://scripts/characters/enemy/AlterEgo.cs" id="1_miy7r"]
-[ext_resource type="Texture2D" uid="uid://ux15s4fa4y5i" path="res://assets/characters/enemys/Pepin_alterego.png" id="2_403c1"]
+[ext_resource type="Script" uid="uid://c101f1b7onnbx" path="res://scripts/characters/enemy/AlterEgo.cs" id="1_iy6dx"]
+[ext_resource type="Texture2D" uid="uid://ux15s4fa4y5i" path="res://assets/characters/enemys/Pepin_alterego.png" id="2_ythwg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b1asu"]
-atlas = ExtResource("2_403c1")
+atlas = ExtResource("2_ythwg")
 region = Rect2(0, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5k2i6"]
-atlas = ExtResource("2_403c1")
+atlas = ExtResource("2_ythwg")
 region = Rect2(64, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7vud5"]
-atlas = ExtResource("2_403c1")
+atlas = ExtResource("2_ythwg")
 region = Rect2(128, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jorc1"]
-atlas = ExtResource("2_403c1")
+atlas = ExtResource("2_ythwg")
 region = Rect2(192, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0ybud"]
-atlas = ExtResource("2_403c1")
+atlas = ExtResource("2_ythwg")
 region = Rect2(256, 0, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_uku48"]
@@ -50,8 +50,8 @@ animations = [{
 size = Vector2(21, 35)
 
 [node name="AlterEgo" type="CharacterBody2D" groups=["enemies_hell"]]
-script = ExtResource("1_miy7r")
-Speed = 100.0
+script = ExtResource("1_iy6dx")
+Speed = 90.0
 MaxHealth = 300
 AttackDamage = 2
 AttackCooldown = 1.0

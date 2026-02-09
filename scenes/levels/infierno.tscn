@@ -99,6 +99,8 @@ zoom = Vector2(2.1, 2.1)
 [node name="Spawner" type="Node2D" parent="." groups=["enemies_hell"]]
 position = Vector2(-100, -307)
 script = ExtResource("3_vqxcy")
+MinDistance = 600.0
+MaxDistance = 900.0
 PlayerPath = NodePath("../Player")
 
 [node name="UI" parent="." instance=ExtResource("4_cjis5")]

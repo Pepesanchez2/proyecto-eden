@@ -26,11 +26,17 @@ texture = ExtResource("1_kjlix")
 [node name="muerte" type="TextureRect" parent="."]
 texture_filter = 1
 layout_mode = 0
+<<<<<<< HEAD
 offset_left = 507.0
 offset_top = 211.0
 offset_right = 1455.0
 offset_bottom = 500.0
 texture = ExtResource("2_rebte")
+=======
+offset_right = 8.0
+offset_bottom = 8.0
+text = ""
+>>>>>>> 51ff5b6 (Grimorio dispara.)
 
 [node name="volver" type="Button" parent="."]
 z_index = 1

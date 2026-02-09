@@ -1,30 +1,30 @@
 [gd_scene load_steps=11 format=3 uid="uid://cs7wealiht4mo"]
 
-[ext_resource type="Script" uid="uid://u5tduia2q1dm" path="res://scripts/characters/enemy/Sombra.cs" id="1_6oxb3"]
-[ext_resource type="Texture2D" uid="uid://dha37xpya31x1" path="res://assets/characters/enemys/sombra.png" id="2_8wv68"]
+[ext_resource type="Script" uid="uid://u5tduia2q1dm" path="res://scripts/characters/enemy/Sombra.cs" id="1_h5wh4"]
+[ext_resource type="Texture2D" uid="uid://dha37xpya31x1" path="res://assets/characters/enemys/sombra.png" id="2_uhyd6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_06th1"]
-atlas = ExtResource("2_8wv68")
+atlas = ExtResource("2_uhyd6")
 region = Rect2(0, 0, 56, 56)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ouktw"]
-atlas = ExtResource("2_8wv68")
+atlas = ExtResource("2_uhyd6")
 region = Rect2(56, 0, 56, 56)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pteoc"]
-atlas = ExtResource("2_8wv68")
+atlas = ExtResource("2_uhyd6")
 region = Rect2(112, 0, 56, 56)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_iewnv"]
-atlas = ExtResource("2_8wv68")
+atlas = ExtResource("2_uhyd6")
 region = Rect2(168, 0, 56, 56)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b8kmu"]
-atlas = ExtResource("2_8wv68")
+atlas = ExtResource("2_uhyd6")
 region = Rect2(224, 0, 56, 56)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lqj3s"]
-atlas = ExtResource("2_8wv68")
+atlas = ExtResource("2_uhyd6")
 region = Rect2(280, 0, 56, 56)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wh5iv"]
@@ -57,7 +57,7 @@ animations = [{
 size = Vector2(15, 32)
 
 [node name="Sombra" type="CharacterBody2D" groups=["enemies_hell"]]
-script = ExtResource("1_6oxb3")
+script = ExtResource("1_h5wh4")
 Speed = 100.0
 MaxHealth = 100
 AttackCooldown = 1.0

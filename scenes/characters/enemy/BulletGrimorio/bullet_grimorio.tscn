@@ -21,9 +21,10 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7cw33"]
 size = Vector2(15.375, 13)
 
-[node name="bulletGrimorio" type="CharacterBody2D" groups=["enemies_hell"]]
+[node name="BulletGrimorio" type="Area2D" groups=["enemies_hell", "projectiles"]]
 script = ExtResource("1_6d1kj")
-Speed = 50.0
+Speed = 150.0
+Lifetime = 10.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["enemies_hell"]]
 texture_filter = 1
