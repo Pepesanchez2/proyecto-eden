@@ -1,3 +1,6 @@
+CanvasLayer
+CheckButton
+TextureRect
 TileMapLayer
 Sprite2D
 AnimatedSprite2D

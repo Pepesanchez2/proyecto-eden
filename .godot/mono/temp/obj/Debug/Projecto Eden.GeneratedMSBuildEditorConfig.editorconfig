@@ -1,6 +1,6 @@
 is_global = true
 build_property.GodotDisabledSourceGenerators = 
-build_property.GodotProjectDir = /home/dev/Programacion/Proyecto Eden/proyecto-eden/
+build_property.GodotProjectDir = C:\Users\Pepe\Documents\proyecto-eden-main (2)\proyecto-eden-main\
 build_property.GodotProjectDirBase64 = 
 build_property.GodotSourceGenerators = 
 build_property.IsGodotToolsProject = 
@@ -13,6 +13,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ProjectoEden
-build_property.ProjectDir = /home/dev/Programacion/Proyecto Eden/proyecto-eden/
+build_property.ProjectDir = C:\Users\Pepe\Documents\proyecto-eden-main (2)\proyecto-eden-main\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

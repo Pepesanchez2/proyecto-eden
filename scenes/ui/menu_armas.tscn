@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cq3svo4f7mrxr"]
+[gd_scene load_steps=13 format=3 uid="uid://cq3svo4f7mrxr"]
 
 [ext_resource type="Texture2D" uid="uid://cp2ig2ophthob" path="res://assets/weapons/Falocha.png" id="1_3lj6i"]
 [ext_resource type="Texture2D" uid="uid://48gx43cwlbup" path="res://assets/ui/dc1cd5e2-9978-4586-bd2c-773e9728f053.png" id="1_24sgu"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://46cv6ji4n3v4" path="res://assets/weapons/Baston.png" id="5_qwrn4"]
 [ext_resource type="Texture2D" uid="uid://cvwska7oxqttw" path="res://assets/weapons/Ricochet-Sheet.png" id="6_50hkc"]
 [ext_resource type="Texture2D" uid="uid://cqc7wdxv362qy" path="res://assets/weapons/navaja1.png" id="7_pubkc"]
+[ext_resource type="Script" uid="uid://bg1qbkt0xagin" path="res://scripts/ui/button_volver.cs" id="12_3lj6i"]
 
 [node name="menu_armas" type="Control"]
 layout_mode = 3
@@ -152,3 +153,17 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 script = ExtResource("3_24sgu")
+
+[node name="volver" type="Button" parent="."]
+z_index = 1
+texture_filter = 1
+layout_mode = 0
+offset_left = 102.0
+offset_top = 912.0
+offset_right = 336.0
+offset_bottom = 1003.0
+action_mode = 0
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("12_3lj6i")
