@@ -1,5 +1,3 @@
-res://scenes/ui/menu_options.tscn
-res://scenes/ui/menu_armas.tscn
 res://scripts/characters/enemy/Angel.cs
 res://scripts/ui/button_options.cs
 res://scripts/ui/button_volver.cs
@@ -18,10 +16,3 @@ res://scripts/weapons/bullet/BulletGrimorio.cs
 res://scripts/weapons/Colt.cs
 res://scripts/ui/InLevelUI.cs
 res://scripts/characters/enemy/GabeNewel.cs
-res://scenes/characters/enemy/infierno/grimorio.tscn
-res://scenes/characters/enemy/BulletGrimorio/bullet_grimorio.tscn
-res://scenes/characters/enemy/infierno/sombra.tscn
-res://scenes/characters/enemy/infierno/AlterEgo.tscn
-res://scenes/levels/infierno.tscn
-res://scenes/levels/cielo.tscn
-res://scenes/characters/player/Player.tscn
