@@ -37,6 +37,11 @@ public partial class Spawner : Node2D
 	[Export]
 	public string EnemyGroup = "";
 
+	// Carpeta dentro de scenes/characters/enemy donde están los enemigos para este nivel
+	// Si se deja vacía, intentaremos inferirla a partir de EnemyGroup (cielo/infierno)
+	[Export]
+	public string EnemyFolder = "";
+
 	// Distancias mínima y máxima desde el jugador donde aparecerán los enemigos
 	[Export]
 	public float MinDistance = 800.0f;
@@ -120,59 +125,105 @@ public partial class Spawner : Node2D
 					EnemyGroup = "enemies";
 				}
 				GD.Print($"Spawner: usando EnemyGroup = {EnemyGroup}");
-			}
 
-		// Si no hay enemigos configurados en el inspector, intentar cargar todas las escenas
-		// dentro de res://scenes/characters/enemy/ y usarlas como opciones por defecto.
-		if (EnemyScenes == null || EnemyScenes.Length == 0)
-		{
-			var loaded = new List<PackedScene>();
-			var dir = DirAccess.Open("res://scenes/characters/enemy");
-			if (dir != null)
-			{
-				dir.ListDirBegin();
-				string file = dir.GetNext();
-				while (!string.IsNullOrEmpty(file))
+				// Inferir carpeta de enemigos si no se indicó explícitamente
+				if (string.IsNullOrEmpty(EnemyFolder))
 				{
-					// ignorar '.' y '..'
-					if (file == "." || file == "..")
-					{
-						file = dir.GetNext();
-						continue;
-					}
+					// intentar elegir carpeta según el group detectado
+					string tryFolder = "";
+					if (EnemyGroup.ToLowerInvariant().Contains("hell") || EnemyGroup.ToLowerInvariant().Contains("infierno"))
+						tryFolder = "infierno";
+					else
+						tryFolder = "cielo";
 
-					if (!dir.CurrentIsDir() && file.EndsWith(".tscn"))
+					var testPath = $"res://scenes/characters/enemy/{tryFolder}";
+					var testDir = DirAccess.Open(testPath);
+					if (testDir != null)
 					{
-						var path = $"res://scenes/characters/enemy/{file}";
-						var ps = ResourceLoader.Load<PackedScene>(path);
-						if (ps != null)
-							loaded.Add(ps);
+						EnemyFolder = tryFolder;
+						GD.Print($"Spawner: usando carpeta de enemigos '{EnemyFolder}'");
+						// no necesitamos cerrar DirAccess explícitamente aquí
 					}
-					file = dir.GetNext();
 				}
-				dir.ListDirEnd();
 			}
-			
-			if (loaded.Count > 0)
+			// Si no hay enemigos configurados en el inspector, intentar cargar escenas desde la carpeta
+			// correspondiente (res://scenes/characters/enemy/{EnemyFolder}) si existe, o fallback a la carpeta base.
+			if (EnemyScenes == null || EnemyScenes.Length == 0)
 			{
-				EnemyScenes = loaded.ToArray();
-				GD.Print($"Spawner: cargadas {EnemyScenes.Length} escenas desde res://scenes/characters/enemy/");
-			}
-			else
-			{
-				// Fallback: intentar cargar Angel en caso de que no haya archivos en la carpeta
-				var angel = ResourceLoader.Load<PackedScene>("res://scenes/enemies/Angel.tscn");
-				if (angel != null)
+				var loaded = new List<PackedScene>();
+				string basePath = "res://scenes/characters/enemy";
+				string loadPath = basePath;
+				if (!string.IsNullOrEmpty(EnemyFolder))
+					loadPath = $"{basePath}/{EnemyFolder}";
+
+				var dir = DirAccess.Open(loadPath);
+				if (dir != null)
 				{
-					EnemyScenes = new PackedScene[] { angel };
-					GD.Print("Spawner: Angel.tscn añadido automáticamente a EnemyScenes (fallback)." );
+					dir.ListDirBegin();
+					string file = dir.GetNext();
+					while (!string.IsNullOrEmpty(file))
+					{
+						// ignorar '.' y '..'
+						if (file == "." || file == "..")
+						{
+							file = dir.GetNext();
+							continue;
+						}
+
+						if (!dir.CurrentIsDir() && file.EndsWith(".tscn"))
+						{
+							var path = $"{loadPath}/{file}";
+							var ps = ResourceLoader.Load<PackedScene>(path);
+							if (ps != null)
+								loaded.Add(ps);
+						}
+						file = dir.GetNext();
+					}
+					dir.ListDirEnd();
+				}
+				else if (loadPath != basePath)
+				{
+					// si la carpeta específica no existe, intentar cargar desde la carpeta base
+					dir = DirAccess.Open(basePath);
+					if (dir != null)
+					{
+						dir.ListDirBegin();
+						string file = dir.GetNext();
+						while (!string.IsNullOrEmpty(file))
+						{
+							if (file == "." || file == "..") { file = dir.GetNext(); continue; }
+							if (!dir.CurrentIsDir() && file.EndsWith(".tscn"))
+							{
+								var path = $"{basePath}/{file}";
+								var ps = ResourceLoader.Load<PackedScene>(path);
+								if (ps != null) loaded.Add(ps);
+							}
+							file = dir.GetNext();
+						}
+						dir.ListDirEnd();
+					}
+				}
+
+				if (loaded.Count > 0)
+				{
+					EnemyScenes = loaded.ToArray();
+					GD.Print($"Spawner: cargadas {EnemyScenes.Length} escenas desde {loadPath}");
 				}
 				else
 				{
-					GD.PrintErr("Spawner: no se pudieron encontrar escenas en res://scenes/characters/enemy/ ni el fallback Angel.tscn");
+					// Fallback: intentar cargar Angel en caso de que no haya archivos en la carpeta
+					var angel = ResourceLoader.Load<PackedScene>("res://scenes/enemies/Angel.tscn");
+					if (angel != null)
+					{
+						EnemyScenes = new PackedScene[] { angel };
+						GD.Print("Spawner: Angel.tscn añadido automáticamente a EnemyScenes (fallback)." );
+					}
+					else
+					{
+						GD.PrintErr($"Spawner: no se pudieron encontrar escenas en {loadPath} ni el fallback Angel.tscn");
+					}
 				}
 			}
-		}
 	}}
 
 	public override void _Process(double delta)

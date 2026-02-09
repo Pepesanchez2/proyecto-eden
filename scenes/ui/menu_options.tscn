@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://ctpahfebt2m50"]
+[gd_scene load_steps=3 format=3 uid="uid://ctpahfebt2m50"]
 
-[ext_resource type="Texture2D" uid="uid://cteka1rf15hus" path="res://assets/ui/Blue.png" id="1_snv1p"]
 [ext_resource type="Texture2D" uid="uid://dlslblpqv8wgn" path="res://assets/ui/Back.png" id="2_snv1p"]
-[ext_resource type="Script" uid="uid://bo6qu0nnb20rs" path="res://scripts/ui/button_volver.cs" id="3_snv1p"]
+[ext_resource type="Script" uid="uid://bg1qbkt0xagin" path="res://scripts/ui/button_volver.cs" id="3_snv1p"]
 
 [node name="menu_options" type="Control"]
 layout_mode = 3
@@ -20,11 +19,11 @@ texture_filter = 1
 layout_mode = 0
 offset_right = 2037.0
 offset_bottom = 1085.0
-texture = ExtResource("1_snv1p")
 stretch_mode = 1
 
 [node name="volver" type="Button" parent="."]
 z_index = 1
+texture_filter = 1
 layout_mode = 0
 offset_left = 808.0
 offset_top = 915.0

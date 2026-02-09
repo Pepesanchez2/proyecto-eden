@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1770391379
+::res://::1770647968
 README.md::TextFile::-1::1769099830::0::1::::<><><>0<>0<><>::
 ::res://assets/::1770308858
 ::res://assets/characters/::1769710663
@@ -67,25 +67,27 @@ bullet_Ricopeta3.png::CompressedTexture2D::3712909700015049714::1770307970::1770
 bullet_sombrero.png::CompressedTexture2D::1291123658368286141::1770307970::1770307970::1::::<><><>0<>0<>dd1ec2449e1bb949848b9457f61b7354<>res://.godot/imported/bullet_sombrero.png-0f02c19a8477c1b11d13dbc0d663e26b.ctex::
 ::res://scenes/::1770309404
 ::res://scenes/characters/::1769710663
-::res://scenes/characters/enemy/::1770132692
-AlterEgo.tscn::PackedScene::3123782099820290879::1770054613::0::1::::<><><>0<>0<><>::uid://c101f1b7onnbx::::res://scripts/characters/enemy/AlterEgo.cs<>uid://ux15s4fa4y5i::::res://assets/characters/enemys/Pepin_alterego.png
-Angel.tscn::PackedScene::4528662757714344775::1770054613::0::1::::<><><>0<>0<><>::uid://b5laiwworcuwa::::res://scripts/characters/enemy/Angel.cs<>uid://mskdu7hj7ikx::::res://assets/characters/enemys/Angel-Sheet.png
-GabeNewel.tscn::PackedScene::3171005569924200924::1770054613::0::1::::<><><>0<>0<><>::uid://dtw1p2q72pamd::::res://assets/characters/enemys/Gabe Newel-Sheet.png<>uid://daxck8xkjeurr::::res://scripts/characters/enemy/GabeNewel.cs
-grimorio.tscn::PackedScene::6463513438341250217::1770132655::0::1::::<><><>0<>0<><>::uid://d2vjg5nhkb5x1::::res://scripts/characters/enemy/Grimorio.cs<>uid://dt81dktqb2hlc::::res://assets/characters/enemys/Grimorio-Sheet.png
-Jesucristo.tscn::PackedScene::3654278333689377021::1770053399::0::1::::<><><>0<>0<><>::uid://c30ch477m2iu6::::res://scripts/characters/enemy/Jesucristo.cs<>uid://dyixtdrymbewe::::res://assets/characters/enemys/Jesucristo-Sheet.png
-sombra.tscn::PackedScene::6103643575383646690::1770129558::0::1::::<><><>0<>0<><>::uid://u5tduia2q1dm::::res://scripts/characters/enemy/Sombra.cs<>uid://dha37xpya31x1::::res://assets/characters/enemys/sombra.png
+::res://scenes/characters/enemy/::1770647968
 ::res://scenes/characters/enemy/BulletGrimorio/::1770132861
 bullet_grimorio.tscn::PackedScene::1905847804745908750::1770132861::0::1::::<><><>0<>0<><>::uid://dnwwj0wrhuam0::::res://scripts/weapons/bullet/BulletGrimorio.cs<>uid://dr5k1hf864ins::::res://assets/weapons/bullet/bullet_Grimorio.png
+::res://scenes/characters/enemy/cielo/::1770647966
+Angel.tscn::PackedScene::4528662757714344775::1770054613::0::1::::<><><>0<>0<><>::uid://b5laiwworcuwa::::res://scripts/characters/enemy/Angel.cs<>uid://mskdu7hj7ikx::::res://assets/characters/enemys/Angel-Sheet.png
+Jesucristo.tscn::PackedScene::3654278333689377021::1770053399::0::1::::<><><>0<>0<><>::uid://c30ch477m2iu6::::res://scripts/characters/enemy/Jesucristo.cs<>uid://dyixtdrymbewe::::res://assets/characters/enemys/Jesucristo-Sheet.png
+::res://scenes/characters/enemy/infierno/::1770647968
+AlterEgo.tscn::PackedScene::3123782099820290879::1770054613::0::1::::<><><>0<>0<><>::uid://c101f1b7onnbx::::res://scripts/characters/enemy/AlterEgo.cs<>uid://ux15s4fa4y5i::::res://assets/characters/enemys/Pepin_alterego.png
+GabeNewel.tscn::PackedScene::3171005569924200924::1770054613::0::1::::<><><>0<>0<><>::uid://dtw1p2q72pamd::::res://assets/characters/enemys/Gabe Newel-Sheet.png<>uid://daxck8xkjeurr::::res://scripts/characters/enemy/GabeNewel.cs
+grimorio.tscn::PackedScene::6463513438341250217::1770132655::0::1::::<><><>0<>0<><>::uid://d2vjg5nhkb5x1::::res://scripts/characters/enemy/Grimorio.cs<>uid://dt81dktqb2hlc::::res://assets/characters/enemys/Grimorio-Sheet.png
+sombra.tscn::PackedScene::6103643575383646690::1770129558::0::1::::<><><>0<>0<><>::uid://u5tduia2q1dm::::res://scripts/characters/enemy/Sombra.cs<>uid://dha37xpya31x1::::res://assets/characters/enemys/sombra.png
 ::res://scenes/characters/player/::1770128391
 Player.tscn::PackedScene::4443980094362499000::1770128391::0::1::::<><><>0<>0<><>::uid://djogeovpnsqbp::::res://scripts/characters/player/Player.cs<>uid://ihxyrtnd20bk::::res://assets/characters/player/Pepin.png
-::res://scenes/levels/::1770309886
-cielo.tscn::PackedScene::5182400970183637938::1770309886::0::1::::<><><>0<>0<><>::uid://dfsgc40a3xwu1::::res://assets/level/Cielo.png<>uid://b4kxx5satbfoq::::res://scenes/characters/player/Player.tscn<>uid://bvota83cymjkh::::res://scripts/characters/enemy/Spawner.cs
-infierno.tscn::PackedScene::6056876636576481809::1770309878::0::1::::<><><>0<>0<><>::uid://ba25repdrkbvt::::res://assets/level/Infierno.png<>uid://b4kxx5satbfoq::::res://scenes/characters/player/Player.tscn<>uid://bvota83cymjkh::::res://scripts/characters/enemy/Spawner.cs
-::res://scenes/ui/::1770308021
+::res://scenes/levels/::1770391524
+cielo.tscn::PackedScene::5182400970183637938::1770391524::0::1::::<><><>0<>0<><>::uid://dfsgc40a3xwu1::::res://assets/level/Cielo.png<>uid://b4kxx5satbfoq::::res://scenes/characters/player/Player.tscn<>uid://bvota83cymjkh::::res://scripts/characters/enemy/Spawner.cs<>uid://bg4u7ifgsd0b6::::res://scenes/ui/ui.tscn
+infierno.tscn::PackedScene::6056876636576481809::1770391501::0::1::::<><><>0<>0<><>::uid://ba25repdrkbvt::::res://assets/level/Infierno.png<>uid://b4kxx5satbfoq::::res://scenes/characters/player/Player.tscn<>uid://bvota83cymjkh::::res://scripts/characters/enemy/Spawner.cs<>uid://bg4u7ifgsd0b6::::res://scenes/ui/ui.tscn
+::res://scenes/ui/::1770647564
 menu.tscn::PackedScene::2112198374230433192::1770307853::0::1::::<><><>0<>0<><>::uid://b13exm62232cq::::res://assets/ui/content.png<>uid://br1u6dqfjeg82::::res://scripts/ui/button_start.cs<>uid://bcqktot8xins2::::res://scripts/ui/button_options.cs<>uid://b02iad4vpg7ub::::res://scripts/ui/button_exit.cs
-menu_armas.tscn::PackedScene::5954796630646855203::1770307853::0::1::::<><><>0<>0<><>::uid://cp2ig2ophthob::::res://assets/weapons/Falocha.png<>uid://48gx43cwlbup::::res://assets/ui/dc1cd5e2-9978-4586-bd2c-773e9728f053.png<>uid://bemyprwkshnol::::res://assets/weapons/Colt.png<>uid://da75id68t7qoi::::res://assets/weapons/sombrero_magico.png<>uid://bf7c46djwjet::::res://assets/weapons/GyroSaber1.png<>uid://b2ndele157d1u::::res://scripts/ui/button_select.cs<>uid://cvvfhqwyn0y76::::res://assets/weapons/PuñetazoSimple.png<>uid://ddw26qrt6md4a::::res://assets/weapons/Agua Bendita-Sheet.png<>uid://46cv6ji4n3v4::::res://assets/weapons/Baston.png<>uid://bo6qu0nnb20rs::::res://scripts/ui/button_volver.cs<>uid://cvwska7oxqttw::::res://assets/weapons/Ricochet-Sheet.png<>uid://cqc7wdxv362qy::::res://assets/weapons/navaja1.png
+menu_armas.tscn::PackedScene::5954796630646855203::1770647564::0::1::::<><><>0<>0<><>::uid://cp2ig2ophthob::::res://assets/weapons/Falocha.png<>uid://48gx43cwlbup::::res://assets/ui/dc1cd5e2-9978-4586-bd2c-773e9728f053.png<>uid://bemyprwkshnol::::res://assets/weapons/Colt.png<>uid://da75id68t7qoi::::res://assets/weapons/sombrero_magico.png<>uid://bf7c46djwjet::::res://assets/weapons/GyroSaber1.png<>uid://cgero74wxot4k::::res://scripts/ui/button_select.cs<>uid://cvvfhqwyn0y76::::res://assets/weapons/PuñetazoSimple.png<>uid://ddw26qrt6md4a::::res://assets/weapons/Agua Bendita-Sheet.png<>uid://46cv6ji4n3v4::::res://assets/weapons/Baston.png<>uid://cvwska7oxqttw::::res://assets/weapons/Ricochet-Sheet.png<>uid://cqc7wdxv362qy::::res://assets/weapons/navaja1.png
 menu_muerte.tscn::PackedScene::623797953249664643::1770307853::0::1::::<><><>0<>0<><>::uid://cteka1rf15hus::::res://assets/ui/Blue.png<>uid://c3kwnagjn8tc4::::res://assets/ui/Exit.png<>uid://bo6qu0nnb20rs::::res://scripts/ui/button_volver.cs
-menu_options.tscn::PackedScene::6137407832244918637::1770307853::0::1::::<><><>0<>0<><>::uid://cteka1rf15hus::::res://assets/ui/Blue.png<>uid://dlslblpqv8wgn::::res://assets/ui/Back.png<>uid://bo6qu0nnb20rs::::res://scripts/ui/button_volver.cs
+menu_options.tscn::PackedScene::6137407832244918637::1770647398::0::1::::<><><>0<>0<><>::uid://dlslblpqv8wgn::::res://assets/ui/Back.png<>uid://bg1qbkt0xagin::::res://scripts/ui/button_volver.cs
 ui.tscn::PackedScene::2868692613856951517::1770308021::0::1::::<><><>0<>0<><>::uid://dvv44pevmjam3::::res://scripts/ui/InLevelUI.cs<>uid://ck5e4s714lri6::::res://scripts/ui/LevelUpUI.cs
 ::res://scenes/weapons/::1770132428
 bullet_colt.tscn::PackedScene::-1::1770131726::0::1::::<><><>0<>0<><>::res://scripts/weapons/bullet/BulletColt.cs
