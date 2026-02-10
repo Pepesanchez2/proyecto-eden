@@ -77,8 +77,8 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_mgwkc")
 }],
-"loop": true,
-"name": &"Health",
+"loop": false,
+"name": &"health_bar",
 "speed": 5.0
 }]
 
@@ -93,58 +93,75 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1")
 
-[node name="UI#LevelUpPanel" type="Panel" parent="."]
-visible = false
-script = ExtResource("2")
+[node name="health_bar" type="AnimatedSprite2D" parent="UI#UIControl"]
+texture_filter = 1
+position = Vector2(963, 618)
+scale = Vector2(2.3600001, 1.8399975)
+sprite_frames = SubResource("SpriteFrames_4w2x3")
+animation = &"health_bar"
 
-[node name="UI_LevelUpPanel#VBox" type="VBoxContainer" parent="."]
-visible = false
-
-[node name="UI_LevelUpPanel_VBox#Title" type="Label" parent="."]
-visible = false
-text = "Elige una mejora"
-
-[node name="UI_LevelUpPanel_VBox#Option1" type="Button" parent="."]
-visible = false
-text = "Opcion 1"
-
-[node name="UI_LevelUpPanel_VBox#Option2" type="Button" parent="."]
-visible = false
-text = "Opcion 2"
-
-[node name="UI_LevelUpPanel_VBox#Option3" type="Button" parent="."]
-visible = false
-text = "Opcion 3"
-
-[node name="UI_UIControl#WaveLabel" type="Label" parent="."]
-offset_left = 917.0
-offset_top = 26.0
-offset_right = 986.0
-offset_bottom = 49.0
-text = "Oleada 1"
-
-[node name="UI_UIControl#WaveTimerLabel" type="Label" parent="."]
+[node name="UI_UIControl#WaveTimerLabel" type="Label" parent="UI#UIControl"]
+layout_mode = 0
 offset_left = 934.0
 offset_top = 47.0
 offset_right = 961.0
 offset_bottom = 70.0
 text = "30s"
 
-[node name="UI_UIControl#XPBar" type="ProgressBar" parent="."]
+[node name="UI_UIControl#WaveLabel" type="Label" parent="UI#UIControl"]
+layout_mode = 0
+offset_left = 917.0
+offset_top = 26.0
+offset_right = 986.0
+offset_bottom = 49.0
+text = "Oleada 1"
+
+[node name="UI_UIControl#XPBar" type="ProgressBar" parent="UI#UIControl"]
+layout_mode = 0
 offset_top = 1053.0
 offset_right = 1920.335
 offset_bottom = 1080.0
 
-[node name="UI_UIControl#LevelLabel" type="Label" parent="."]
+[node name="UI_UIControl#LevelLabel" type="Label" parent="UI#UIControl"]
+layout_mode = 0
 offset_left = 5.0
 offset_top = 1055.0
 offset_right = 36.0
 offset_bottom = 1078.0
 text = "Lv 1"
 
-[node name="health_bar" type="AnimatedSprite2D" parent="."]
-texture_filter = 1
-position = Vector2(960.00006, 666)
-scale = Vector2(2.3600001, 1.8399975)
-sprite_frames = SubResource("SpriteFrames_4w2x3")
-animation = &"Health"
+[node name="UI#LevelUpPanel" type="Panel" parent="."]
+visible = false
+script = ExtResource("2")
+
+[node name="UI_LevelUpPanel#VBox" type="VBoxContainer" parent="UI#LevelUpPanel"]
+visible = false
+layout_mode = 0
+
+[node name="UI_LevelUpPanel_VBox#Title" type="Label" parent="UI#LevelUpPanel"]
+visible = false
+layout_mode = 0
+offset_right = 129.0
+offset_bottom = 23.0
+text = "Elige una mejora"
+
+[node name="UI_LevelUpPanel_VBox#Option1" type="Button" parent="UI#LevelUpPanel"]
+visible = false
+layout_mode = 0
+offset_right = 77.0
+offset_bottom = 31.0
+text = "Opcion 1"
+
+[node name="UI_LevelUpPanel_VBox#Option2" type="Button" parent="UI#LevelUpPanel"]
+visible = false
+layout_mode = 0
+offset_right = 77.0
+offset_bottom = 31.0
+text = "Opcion 2"
+
+[node name="UI_LevelUpPanel_VBox#Option3" type="Button" parent="UI#LevelUpPanel"]
+visible = false
+layout_mode = 0
+offset_right = 77.0
+offset_bottom = 31.0
+text = "Opcion 3"

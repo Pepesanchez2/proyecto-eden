@@ -1,29 +1,48 @@
-[gd_scene load_steps=3 format=3 uid="uid://p8527q3bg6wr"]
+[gd_scene load_steps=6 format=3 uid="uid://p8527q3bg6wr"]
 
+[ext_resource type="Script" uid="uid://drlyrwwyj7s0n" path="res://scripts/ui/menu_pausa.cs" id="1_57d5x"]
 [ext_resource type="Texture2D" uid="uid://dlslblpqv8wgn" path="res://assets/ui/Back.png" id="1_ipeia"]
+[ext_resource type="Texture2D" uid="uid://c3kwnagjn8tc4" path="res://assets/ui/Exit.png" id="2_hp042"]
 [ext_resource type="Script" uid="uid://bg1qbkt0xagin" path="res://scripts/ui/button_volver.cs" id="2_inbmx"]
+[ext_resource type="Script" uid="uid://daisp7x23hnbe" path="res://scripts/ui/quitar_pausa.cs" id="5_q0fld"]
 
 [node name="menu_pausa" type="CanvasLayer"]
+script = ExtResource("1_57d5x")
 
 [node name="volver" type="Button" parent="."]
 z_index = 1
 texture_filter = 1
-offset_left = 872.0
-offset_top = 917.0
-offset_right = 1136.0
-offset_bottom = 1013.0
+offset_left = 859.0
+offset_top = 904.0
+offset_right = 1123.0
+offset_bottom = 1000.0
 action_mode = 0
-icon = ExtResource("1_ipeia")
+icon = ExtResource("2_hp042")
 flat = true
 icon_alignment = 1
 expand_icon = true
 script = ExtResource("2_inbmx")
 
+[node name="quitar_pausa" type="Button" parent="."]
+z_index = 1
+texture_filter = 1
+offset_left = 3.0
+offset_top = 920.0
+offset_right = 267.0
+offset_bottom = 1016.0
+action_mode = 0
+icon = ExtResource("1_ipeia")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_q0fld")
+
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
-offset_left = -6.0
-offset_right = 1921.0
-offset_bottom = 1091.0
+offset_left = 658.0
+offset_top = 59.0
+offset_right = 1295.0
+offset_bottom = 269.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0

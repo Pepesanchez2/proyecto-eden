@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://5dfumaprw6w7"]
 
 [ext_resource type="Texture2D" uid="uid://b13exm62232cq" path="res://assets/ui/content.png" id="1_7w7rl"]
-[ext_resource type="Script" uid="uid://br1u6dqfjeg82" path="res://scripts/ui/button_start.cs" id="2_wedc3"]
-[ext_resource type="Script" uid="uid://bcqktot8xins2" path="res://scripts/ui/button_options.cs" id="3_w6y0u"]
-[ext_resource type="Script" uid="uid://b02iad4vpg7ub" path="res://scripts/ui/button_exit.cs" id="4_cx0sj"]
+[ext_resource type="Script" uid="uid://b8u32xikgsslg" path="res://scripts/ui/button_start.cs" id="2_wedc3"]
+[ext_resource type="Script" uid="uid://oiucxs74tokj" path="res://scripts/ui/button_options.cs" id="3_w6y0u"]
+[ext_resource type="Script" uid="uid://ugjh5ilt0mkk" path="res://scripts/ui/button_exit.cs" id="4_cx0sj"]
 
 [node name="menu" type="Control"]
 layout_mode = 3

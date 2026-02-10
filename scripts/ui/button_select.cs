@@ -1,61 +1,34 @@
 using Godot;
 using System.Collections.Generic;
 
-public partial class button_select : Control
-{
-    // Lista de botones de arma
-    private List<Button> armas = new List<Button>();
-    private Button armaSeleccionada = null;
+public partial class button_select : Button {
+    public static button_select Instancia;
+
+    private string armaSeleccionada = null;
 
     public override void _Ready()
     {
-        // Agrega los botones individuales manualmente
-        Button btn1 = GetNode<Button>("Button_Arma1");
-        Button btn2 = GetNode<Button>("Button_Arma2");
-        Button btn3 = GetNode<Button>("Button_Arma3");
+        Instancia = this;
 
-        armas.Add(btn1);
-        armas.Add(btn2);
-        armas.Add(btn3);
-
-        // Conectar las señales
-        foreach (Button b in armas)
-        {
-            b.Pressed += () => SeleccionarArma(b);
-        }
-
-        // Botón Jugar
-        Button btnJugar = GetNode<Button>("Button_Jugar");
-        btnJugar.Pressed += Jugar;
+        Pressed += Jugar;
     }
 
-    private void SeleccionarArma(Button btn)
+     public void SeleccionarArma(string idArma)
     {
-        // Deseleccionar todas
-        foreach (Button b in armas)
-        {
-            b.Flat = false; // Cambiar apariencia
-        }
-
-        // Seleccionar esta arma
-        armaSeleccionada = btn;
-        btn.Flat = true; // Cambia apariencia para indicar selección
-        GD.Print("Arma seleccionada: " + armaSeleccionada.Name);
+        armaSeleccionada = idArma;
+        GD.Print("Arma seleccionada: " + idArma);
     }
 
-    private void Jugar()
+    public void Jugar()
     {
         if (armaSeleccionada == null)
         {
-            GD.Print("¡Selecciona un arma primero!");
+            GD.Print("Selecciona un arma primero");
             return;
         }
 
-        GD.Print("JUGANDO con arma: " + armaSeleccionada.Name);
+        GD.Print("Entrando al juego con: " + armaSeleccionada);
 
-        // Cambiar de escena
-        GetTree().ChangeSceneToFile("res://scenes/mapa/cielo.tscn");
-
-        // Para pasar info del arma, puedes usar un Autoload
+        GetTree().ChangeSceneToFile("res://scenes/levels/infierno.tscn");
     }
 }

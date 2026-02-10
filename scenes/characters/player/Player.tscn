@@ -44,6 +44,8 @@ size = Vector2(18, 25.5)
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_1crxk")
+Friction = 0.0
+DashCooldown = 1.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1

@@ -12,7 +12,7 @@ public partial class Player : CharacterBody2D
 
 	// Fuerza de frenado cuando no hay input
 	[Export]
-	public float Friction = 1000.0f;
+	public float Friction = 0.0f;
 
 	private AnimatedSprite2D anim;
 
@@ -107,7 +107,7 @@ public partial class Player : CharacterBody2D
 			else
 			{
 				// Cuando no hay input, acercamos la velocidad a cero suavemente
-				velocity = velocity.MoveToward(Vector2.Zero, Friction * dt);
+				velocity = velocity.MoveToward(Vector2.Zero, DashSpeed * dt);
 			}
 			
 			// cooldown del dash
