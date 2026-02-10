@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=3 uid="uid://5dfumaprw6w7"]
+
+[ext_resource type="Texture2D" uid="uid://b13exm62232cq" path="res://assets/ui/content.png" id="1_7w7rl"]
+[ext_resource type="Script" uid="uid://br1u6dqfjeg82" path="res://scripts/ui/button_start.cs" id="2_wedc3"]
+[ext_resource type="Script" uid="uid://bcqktot8xins2" path="res://scripts/ui/button_options.cs" id="3_w6y0u"]
+[ext_resource type="Script" uid="uid://b02iad4vpg7ub" path="res://scripts/ui/button_exit.cs" id="4_cx0sj"]
+
+[node name="menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_right = 2037.0
+offset_bottom = 1085.0
+texture = ExtResource("1_7w7rl")
+
+[node name="start" type="Button" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 115.0
+offset_top = 517.0
+offset_right = 379.0
+offset_bottom = 613.0
+action_mode = 0
+flat = true
+script = ExtResource("2_wedc3")
+
+[node name="options" type="Button" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 1539.0
+offset_top = 520.0
+offset_right = 1803.0
+offset_bottom = 616.0
+action_mode = 0
+flat = true
+script = ExtResource("3_w6y0u")
+
+[node name="exit" type="Button" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 808.0
+offset_top = 915.0
+offset_right = 1072.0
+offset_bottom = 1011.0
+action_mode = 0
+flat = true
+script = ExtResource("4_cx0sj")

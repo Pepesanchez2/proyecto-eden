@@ -1,0 +1,67 @@
+[gd_scene load_steps=10 format=3 uid="uid://blgb87g7ubwym"]
+
+[ext_resource type="Texture2D" uid="uid://dtw1p2q72pamd" path="res://assets/characters/enemys/Gabe Newel-Sheet.png" id="1_0r8e4"]
+[ext_resource type="Script" uid="uid://daxck8xkjeurr" path="res://scripts/characters/enemy/GabeNewel.cs" id="1_1w6ql"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1w6ql"]
+atlas = ExtResource("1_0r8e4")
+region = Rect2(0, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t7hph"]
+atlas = ExtResource("1_0r8e4")
+region = Rect2(96, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ihn66"]
+atlas = ExtResource("1_0r8e4")
+region = Rect2(192, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fgdvy"]
+atlas = ExtResource("1_0r8e4")
+region = Rect2(288, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q0u54"]
+atlas = ExtResource("1_0r8e4")
+region = Rect2(384, 0, 96, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tgbla"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1w6ql")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t7hph")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ihn66")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fgdvy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q0u54")
+}],
+"loop": true,
+"name": &"default_enemy",
+"speed": 7.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1w6ql"]
+size = Vector2(30, 62)
+
+[node name="CharacterBody2D" type="CharacterBody2D" groups=["enemies"]]
+script = ExtResource("1_1w6ql")
+Speed = 70.0
+MaxHealth = 220
+AttackDamage = 3
+AttackCooldown = 1.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_tgbla")
+animation = &"default_enemy"
+autoplay = "default_enemy"
+frame_progress = 0.90946954
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_1w6ql")

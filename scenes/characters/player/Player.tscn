@@ -1,0 +1,57 @@
+[gd_scene load_steps=9 format=3 uid="uid://b4kxx5satbfoq"]
+
+[ext_resource type="Script" uid="uid://djogeovpnsqbp" path="res://scripts/characters/player/Player.cs" id="1_1crxk"]
+[ext_resource type="Texture2D" uid="uid://ihxyrtnd20bk" path="res://assets/characters/player/Pepin.png" id="2_1crxk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c3488"]
+atlas = ExtResource("2_1crxk")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o4jik"]
+atlas = ExtResource("2_1crxk")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q053g"]
+atlas = ExtResource("2_1crxk")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pabyu"]
+atlas = ExtResource("2_1crxk")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o4jik"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c3488")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o4jik")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q053g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pabyu")
+}],
+"loop": true,
+"name": &"default_enemy",
+"speed": 6.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1crxk"]
+size = Vector2(18, 25.5)
+
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
+script = ExtResource("1_1crxk")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_o4jik")
+animation = &"default_enemy"
+autoplay = "default_enemy"
+frame_progress = 0.9615044
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D"]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_1crxk")

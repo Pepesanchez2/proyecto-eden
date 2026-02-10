@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://2fhbgltg6fs5"]
+
+[ext_resource type="Script" uid="uid://dnwwj0wrhuam0" path="res://scripts/weapons/bullet/BulletGrimorio.cs" id="1_6d1kj"]
+[ext_resource type="Texture2D" uid="uid://dr5k1hf864ins" path="res://assets/weapons/bullet/bullet_Grimorio.png" id="2_6d1kj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6fg80"]
+atlas = ExtResource("2_6d1kj")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wh5iv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6fg80")
+}],
+"loop": true,
+"name": &"default_grimorio",
+"speed": 7.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7cw33"]
+size = Vector2(15.375, 13)
+
+[node name="bulletGrimorio" type="CharacterBody2D" groups=["enemies_hell"]]
+script = ExtResource("1_6d1kj")
+Speed = 50.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["enemies_hell"]]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_wh5iv")
+animation = &"default_grimorio"
+autoplay = "default_grimorio"
+frame_progress = 0.42862478
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3.6875, 0)
+shape = SubResource("RectangleShape2D_7cw33")
