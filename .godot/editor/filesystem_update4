@@ -27,3 +27,4 @@ res://scripts/ui/button_volver.cs
 res://scripts/ui/quitar_pausa.cs
 res://scripts/characters/enemy/Jesucristo.cs
 res://scripts/ui/weapon/ui_ricochet.cs
+res://scenes/ui/menu.tscn
