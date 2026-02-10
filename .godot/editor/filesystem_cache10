@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1770655222
+::res://::1770732558
 README.md::TextFile::-1::1769099830::0::1::::<><><>0<>0<><>::
 ::res://assets/::1770308858
 ::res://assets/characters/::1769710663
@@ -16,10 +16,11 @@ Pepin.png::CompressedTexture2D::577401666114019704::1769710663::1769710663::1:::
 Cielo.png::CompressedTexture2D::7547734504222561746::1770049397::1770049392::1::::<><><>0<>0<>b00780b7be434faa3fc71fa7f0673943<>res://.godot/imported/Cielo.png-fb7700ffaacc555ffa0eee40a477a1c7.ctex::
 Infierno.png::CompressedTexture2D::2444010984756977889::1770048900::1770048900::1::::<><><>0<>0<>d51ce3dcce3a364a421dce5e2eb69021<>res://.godot/imported/Infierno.png-9112d7bed7bab8a8398edf873f14e745.ctex::
 ::res://assets/obstacles/::1769100469
-::res://assets/ui/::1770655147
+::res://assets/ui/::1770655720
 7bc9d335-b914-44ab-8a0a-d5990bf99dcc.png::CompressedTexture2D::7340177099041598886::1770654963::1770655147::1::::<><><>0<>0<>f33c8839e38a053e2ef3c1483d1a4680<>res://.godot/imported/7bc9d335-b914-44ab-8a0a-d5990bf99dcc.png-8d060f03cc078c873b43ba083b634af1.ctex::
 95b1e465-86e4-4669-924c-fcda07b47a64.png::CompressedTexture2D::3695728265541532349::1770654963::1770655147::1::::<><><>0<>0<>977a33795d1c29fd22235e13bfd27bf1<>res://.godot/imported/95b1e465-86e4-4669-924c-fcda07b47a64.png-03514f2ec5b60a1007be7636418f00a8.ctex::
 Back.png::CompressedTexture2D::7969168405070341705::1770308922::1770308923::1::::<><><>0<>0<>a4c39402dbae432a9710b8505c4461cc<>res://.godot/imported/Back.png-a36940c16b713dcc735760275d29a9ed.ctex::
+Barra de vida-Sheet.png::CompressedTexture2D::6261318935784280980::1770655720::1770655720::1::::<><><>0<>0<>ffd0405114d8e7ba68c8e50cfe98af2f<>res://.godot/imported/Barra de vida-Sheet.png-80d54b83ef064888696a75bf68b98c67.ctex::
 Candado-Sheet.png::CompressedTexture2D::8109602960898990696::1770308922::1770308923::1::::<><><>0<>0<>11c86f1e761438eae40181afe84f7590<>res://.godot/imported/Candado-Sheet.png-cc226496119489a547bc4cca168fe1ea.ctex::
 content.png::CompressedTexture2D::4269417816059603184::1770308869::1770308870::1::::<><><>0<>0<>c08927efb1bc2d631d71427dbabf3b49<>res://.godot/imported/content.png-3fa77203fcb5693a1b1055f641c7b0e1.ctex::
 dc1cd5e2-9978-4586-bd2c-773e9728f053.png::CompressedTexture2D::2104007873155705395::1770308922::1770308923::1::::<><><>0<>0<>2d7b85ab610706799430f1641b66fec9<>res://.godot/imported/dc1cd5e2-9978-4586-bd2c-773e9728f053.png-7a01d5575255132ab5ec7b1983a317e0.ctex::
@@ -86,13 +87,13 @@ Player.tscn::PackedScene::4443980094362499000::1770654963::0::1::::<><><>0<>0<><
 ::res://scenes/levels/::1770654963
 cielo.tscn::PackedScene::5182400970183637938::1770654963::0::1::::<><><>0<>0<><>::uid://dfsgc40a3xwu1::::res://assets/level/Cielo.png<>uid://b4kxx5satbfoq::::res://scenes/characters/player/Player.tscn<>uid://bvota83cymjkh::::res://scripts/characters/enemy/Spawner.cs<>uid://bg4u7ifgsd0b6::::res://scenes/ui/ui.tscn
 infierno.tscn::PackedScene::6056876636576481809::1770654963::0::1::::<><><>0<>0<><>::uid://ba25repdrkbvt::::res://assets/level/Infierno.png<>uid://b4kxx5satbfoq::::res://scenes/characters/player/Player.tscn<>uid://bvota83cymjkh::::res://scripts/characters/enemy/Spawner.cs<>uid://bg4u7ifgsd0b6::::res://scenes/ui/ui.tscn
-::res://scenes/ui/::1770655146
+::res://scenes/ui/::1770657543
 menu.tscn::PackedScene::2112198374230433192::1770307853::0::1::::<><><>0<>0<><>::uid://b13exm62232cq::::res://assets/ui/content.png<>uid://br1u6dqfjeg82::::res://scripts/ui/button_start.cs<>uid://bcqktot8xins2::::res://scripts/ui/button_options.cs<>uid://b02iad4vpg7ub::::res://scripts/ui/button_exit.cs
 menu_armas.tscn::PackedScene::5954796630646855203::1770654963::0::1::::<><><>0<>0<><>::uid://cp2ig2ophthob::::res://assets/weapons/Falocha.png<>uid://48gx43cwlbup::::res://assets/ui/dc1cd5e2-9978-4586-bd2c-773e9728f053.png<>uid://bemyprwkshnol::::res://assets/weapons/Colt.png<>uid://da75id68t7qoi::::res://assets/weapons/sombrero_magico.png<>uid://bf7c46djwjet::::res://assets/weapons/GyroSaber1.png<>uid://cgero74wxot4k::::res://scripts/ui/button_select.cs<>uid://cvvfhqwyn0y76::::res://assets/weapons/PuñetazoSimple.png<>uid://ddw26qrt6md4a::::res://assets/weapons/Agua Bendita-Sheet.png<>uid://46cv6ji4n3v4::::res://assets/weapons/Baston.png<>uid://cvwska7oxqttw::::res://assets/weapons/Ricochet-Sheet.png<>uid://cqc7wdxv362qy::::res://assets/weapons/navaja1.png<>uid://bg1qbkt0xagin::::res://scripts/ui/button_volver.cs
 menu_muerte.tscn::PackedScene::623797953249664643::1770654963::0::1::::<><><>0<>0<><>::uid://cteka1rf15hus::::res://assets/ui/Blue.png<>uid://c3kwnagjn8tc4::::res://assets/ui/Exit.png<>uid://bo6qu0nnb20rs::::res://scripts/ui/button_volver.cs
 menu_options.tscn::PackedScene::6137407832244918637::1770654963::0::1::::<><><>0<>0<><>::uid://dctvv562rcckk::::res://assets/ui/7bc9d335-b914-44ab-8a0a-d5990bf99dcc.png<>uid://dlslblpqv8wgn::::res://assets/ui/Back.png<>uid://bg1qbkt0xagin::::res://scripts/ui/button_volver.cs
 menu_pausa.tscn::PackedScene::1122828553410760377::1770655146::0::1::::<><><>0<>0<><>::uid://dlslblpqv8wgn::::res://assets/ui/Back.png<>uid://bg1qbkt0xagin::::res://scripts/ui/button_volver.cs
-ui.tscn::PackedScene::2868692613856951517::1770308021::0::1::::<><><>0<>0<><>::uid://dvv44pevmjam3::::res://scripts/ui/InLevelUI.cs<>uid://ck5e4s714lri6::::res://scripts/ui/LevelUpUI.cs
+ui.tscn::PackedScene::2868692613856951517::1770657543::0::1::::<><><>0<>0<><>::uid://dvv44pevmjam3::::res://scripts/ui/InLevelUI.cs<>uid://ck5e4s714lri6::::res://scripts/ui/LevelUpUI.cs<>uid://cvhbajlwtghma::::res://assets/ui/Barra de vida-Sheet.png
 ::res://scenes/weapons/::1770654963
 bullet_grimorio.tscn::PackedScene::-1::1770654963::0::1::::<><><>0<>0<><>::res://scripts/weapons/bullet/BulletGrimorio.cs
 colt.tscn::PackedScene::-1::1770131295::0::1::::<><><>0<>0<><>::
@@ -109,13 +110,13 @@ Sombra.cs::CSharpScript::1466868248488896778::1770053175::0::1::::<>CharacterBod
 Spawner.cs::CSharpScript::3890443088159684511::1770654963::0::1::::<>Node2D<><>0<>0<><>::
 ::res://scripts/characters/player/::1770654963
 Player.cs::CSharpScript::7820235145978074353::1770654963::0::1::::<>CharacterBody2D<><>0<>0<><>::
-::res://scripts/ui/::1770654963
+::res://scripts/ui/::1770656620
 button_exit.cs::CSharpScript::1416723681362355302::1770307891::0::1::::<>Button<><>0<>0<><>::
 button_options.cs::CSharpScript::1000377981745054077::1770307891::0::1::::<>Button<><>0<>0<><>::
 button_select.cs::CSharpScript::5203290856799754896::1770307891::0::1::::<>Control<><>0<>0<><>::
 button_start.cs::CSharpScript::4745689591920847988::1770307891::0::1::::<>Button<><>0<>0<><>::
 button_volver.cs::CSharpScript::2862201380556431749::1770307891::0::1::::<>Button<><>0<>0<><>::
-InLevelUI.cs::CSharpScript::8678393076126711900::1770654963::0::1::::<>Control<><>0<>0<><>::
+InLevelUI.cs::CSharpScript::8678393076126711900::1770657831::0::1::::<>Control<><>0<>0<><>::
 LevelUpUI.cs::CSharpScript::5536956788457198043::1770132495::0::1::::<>Panel<><>0<>0<><>::
 ::res://scripts/weapons/::1770130514
 Colt.cs::CSharpScript::2050941450339956754::1770131295::0::1::::<>Node2D<><>0<>0<><>::

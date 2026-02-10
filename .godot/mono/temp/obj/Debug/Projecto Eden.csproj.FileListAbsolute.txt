@@ -16,20 +16,3 @@
 /home/dev/Programacion/Proyecto Eden/proyecto-eden/.godot/mono/temp/obj/Debug/Projecto Eden.pdb
 /home/dev/Programacion/Proyecto Eden/proyecto-eden/.godot/mono/temp/obj/Debug/Projecto Eden.genruntimeconfig.cache
 /home/dev/Programacion/Proyecto Eden/proyecto-eden/.godot/mono/temp/obj/Debug/ref/Projecto Eden.dll
-C:\Users\Pepe\Documents\proyecto-eden-main (2)\proyecto-eden-main\.godot\mono\temp\bin\Debug\Projecto Eden.deps.json
-C:\Users\Pepe\Documents\proyecto-eden-main (2)\proyecto-eden-main\.godot\mono\temp\bin\Debug\Projecto Eden.runtimeconfig.json
-C:\Users\Pepe\Documents\proyecto-eden-main (2)\proyecto-eden-main\.godot\mono\temp\bin\Debug\Projecto Eden.dll
-C:\Users\Pepe\Documents\proyecto-eden-main (2)\proyecto-eden-main\.godot\mono\temp\bin\Debug\Projecto Eden.pdb
-C:\Users\Pepe\Documents\proyecto-eden-main (2)\proyecto-eden-main\.godot\mono\temp\bin\Debug\GodotSharp.dll
-C:\Users\Pepe\Documents\proyecto-eden-main (2)\proyecto-eden-main\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
-C:\Users\Pepe\Documents\proyecto-eden-main (2)\proyecto-eden-main\.godot\mono\temp\obj\Debug\Projecto Eden.csproj.AssemblyReference.cache
-C:\Users\Pepe\Documents\proyecto-eden-main (2)\proyecto-eden-main\.godot\mono\temp\obj\Debug\Projecto Eden.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Pepe\Documents\proyecto-eden-main (2)\proyecto-eden-main\.godot\mono\temp\obj\Debug\Projecto Eden.AssemblyInfoInputs.cache
-C:\Users\Pepe\Documents\proyecto-eden-main (2)\proyecto-eden-main\.godot\mono\temp\obj\Debug\Projecto Eden.AssemblyInfo.cs
-C:\Users\Pepe\Documents\proyecto-eden-main (2)\proyecto-eden-main\.godot\mono\temp\obj\Debug\Projecto Eden.csproj.CoreCompileInputs.cache
-C:\Users\Pepe\Documents\proyecto-eden-main (2)\proyecto-eden-main\.godot\mono\temp\obj\Debug\Projecto.7F8EE397.Up2Date
-C:\Users\Pepe\Documents\proyecto-eden-main (2)\proyecto-eden-main\.godot\mono\temp\obj\Debug\Projecto Eden.dll
-C:\Users\Pepe\Documents\proyecto-eden-main (2)\proyecto-eden-main\.godot\mono\temp\obj\Debug\refint\Projecto Eden.dll
-C:\Users\Pepe\Documents\proyecto-eden-main (2)\proyecto-eden-main\.godot\mono\temp\obj\Debug\Projecto Eden.pdb
-C:\Users\Pepe\Documents\proyecto-eden-main (2)\proyecto-eden-main\.godot\mono\temp\obj\Debug\Projecto Eden.genruntimeconfig.cache
-C:\Users\Pepe\Documents\proyecto-eden-main (2)\proyecto-eden-main\.godot\mono\temp\obj\Debug\ref\Projecto Eden.dll

@@ -1,3 +1,5 @@
+res://scenes/levels/infierno.tscn
+res://scripts/characters/player/Player.cs
 res://scripts/characters/enemy/Angel.cs
 res://scripts/ui/button_options.cs
 res://scripts/ui/button_volver.cs
@@ -8,7 +10,6 @@ res://scripts/characters/enemy/Spawner.cs
 res://scripts/characters/enemy/Sombra.cs
 res://scripts/ui/button_start.cs
 res://scripts/ui/LevelUpUI.cs
-res://scripts/characters/player/Player.cs
 res://scripts/ui/button_exit.cs
 res://scripts/ui/button_select.cs
 res://scripts/characters/enemy/Grimorio.cs

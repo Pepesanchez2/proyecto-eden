@@ -183,8 +183,7 @@ public partial class Player : CharacterBody2D
 		// Aquí puedes añadir efectos cuando recibe daño (parpadeo, sonido, knockback...)
 		if (Health <= 0)
 		{
-			// muerte simple: desactivar o reiniciar
-			QueueFree();
+			GetTree().ChangeSceneToFile("res://scenes/ui/menu_muerte.tscn");
 		}
 	}
 
