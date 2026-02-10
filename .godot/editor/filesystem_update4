@@ -17,3 +17,7 @@ res://scripts/weapons/bullet/BulletGrimorio.cs
 res://scripts/weapons/Colt.cs
 res://scripts/ui/InLevelUI.cs
 res://scripts/characters/enemy/GabeNewel.cs
+res://scenes/characters/player/weapons/bullet_colt.tscn
+res://scenes/characters/player/weapons/bullet_Ricopeta1.tscn
+res://scenes/characters/player/weapons/bullet_Ricopeta2.tscn
+res://scenes/characters/player/weapons/bullet_Ricopeta3.tscn
