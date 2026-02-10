@@ -33,3 +33,4 @@ C:\Users\Pepe\Documents\proyecto-eden-main (2)\proyecto-eden-main\.godot\mono\te
 C:\Users\Pepe\Documents\proyecto-eden-main (2)\proyecto-eden-main\.godot\mono\temp\obj\Debug\Projecto Eden.pdb
 C:\Users\Pepe\Documents\proyecto-eden-main (2)\proyecto-eden-main\.godot\mono\temp\obj\Debug\Projecto Eden.genruntimeconfig.cache
 C:\Users\Pepe\Documents\proyecto-eden-main (2)\proyecto-eden-main\.godot\mono\temp\obj\Debug\ref\Projecto Eden.dll
+C:\Users\Pepe\Documents\proyecto-eden-main (2)\proyecto-eden-main\.godot\mono\temp\obj\Debug\Projecto Eden.sourcelink.json

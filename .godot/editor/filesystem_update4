@@ -35,3 +35,6 @@ res://scripts/ui/weapon/ui_falocha.cs
 res://scripts/ui/weapon/ui_puñetazo.cs
 res://scripts/ui/weapon/ui_sombrero.cs
 res://scenes/ui/menu_pausa.tscn
+res://scripts/ui/quitar_pausa.cs
+res://scripts/ui/menu_pausa.cs
+res://scenes/characters/player/Player.tscn

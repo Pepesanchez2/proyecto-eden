@@ -3,6 +3,9 @@
 [ext_resource type="Script" uid="uid://djogeovpnsqbp" path="res://scripts/characters/player/Player.cs" id="1_1crxk"]
 [ext_resource type="Texture2D" uid="uid://ihxyrtnd20bk" path="res://assets/characters/player/Pepin.png" id="2_1crxk"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1crxk"]
+size = Vector2(18, 25.5)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_c3488"]
 atlas = ExtResource("2_1crxk")
 region = Rect2(64, 0, 64, 64)
@@ -39,11 +42,12 @@ animations = [{
 "speed": 6.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1crxk"]
-size = Vector2(18, 25.5)
-
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_1crxk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_1crxk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
@@ -51,7 +55,3 @@ sprite_frames = SubResource("SpriteFrames_o4jik")
 animation = &"default_enemy"
 autoplay = "default_enemy"
 frame_progress = 0.9615044
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D"]
-position = Vector2(1, 0)
-shape = SubResource("RectangleShape2D_1crxk")
