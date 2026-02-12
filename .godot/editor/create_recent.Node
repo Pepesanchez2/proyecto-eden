@@ -1,0 +1,12 @@
+Sprite2D
+CollisionShape2D
+AnimatedSprite2D
+TileMapLayer
+CanvasLayer
+CheckButton
+TextureRect
+CharacterBody2D
+Node2D
+Node
+Panel
+Camera2D

@@ -1,0 +1,74 @@
+[gd_scene load_steps=11 format=3 uid="uid://cs7wealiht4mo"]
+
+[ext_resource type="Script" uid="uid://u5tduia2q1dm" path="res://scripts/characters/enemy/Sombra.cs" id="1_h5wh4"]
+[ext_resource type="Texture2D" uid="uid://dha37xpya31x1" path="res://assets/characters/enemys/sombra.png" id="2_uhyd6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_06th1"]
+atlas = ExtResource("2_uhyd6")
+region = Rect2(0, 0, 56, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ouktw"]
+atlas = ExtResource("2_uhyd6")
+region = Rect2(56, 0, 56, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pteoc"]
+atlas = ExtResource("2_uhyd6")
+region = Rect2(112, 0, 56, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iewnv"]
+atlas = ExtResource("2_uhyd6")
+region = Rect2(168, 0, 56, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b8kmu"]
+atlas = ExtResource("2_uhyd6")
+region = Rect2(224, 0, 56, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lqj3s"]
+atlas = ExtResource("2_uhyd6")
+region = Rect2(280, 0, 56, 56)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wh5iv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_06th1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ouktw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pteoc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iewnv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b8kmu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lqj3s")
+}],
+"loop": true,
+"name": &"default_sombra",
+"speed": 7.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7cw33"]
+size = Vector2(15, 32)
+
+[node name="Sombra" type="CharacterBody2D" groups=["enemies_hell"]]
+script = ExtResource("1_h5wh4")
+Speed = 100.0
+MaxHealth = 100
+AttackCooldown = 1.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_wh5iv")
+animation = &"default_sombra"
+autoplay = "default_sombra"
+frame_progress = 0.6849773
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 3)
+shape = SubResource("RectangleShape2D_7cw33")

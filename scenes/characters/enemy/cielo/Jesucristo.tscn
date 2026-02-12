@@ -1,0 +1,93 @@
+[gd_scene load_steps=14 format=3 uid="uid://bscfovm50pfe0"]
+
+[ext_resource type="Script" uid="uid://c30ch477m2iu6" path="res://scripts/characters/enemy/Jesucristo.cs" id="1_7cw33"]
+[ext_resource type="Texture2D" uid="uid://dyixtdrymbewe" path="res://assets/characters/enemys/Jesucristo-Sheet.png" id="1_cg3h2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7cw33"]
+atlas = ExtResource("1_cg3h2")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dcsbg"]
+atlas = ExtResource("1_cg3h2")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cui6c"]
+atlas = ExtResource("1_cg3h2")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iwp7d"]
+atlas = ExtResource("1_cg3h2")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_34s7l"]
+atlas = ExtResource("1_cg3h2")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wf8u1"]
+atlas = ExtResource("1_cg3h2")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k2rx1"]
+atlas = ExtResource("1_cg3h2")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fmjxc"]
+atlas = ExtResource("1_cg3h2")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m4qpk"]
+atlas = ExtResource("1_cg3h2")
+region = Rect2(512, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tpypv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7cw33")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dcsbg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cui6c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iwp7d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_34s7l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wf8u1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k2rx1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fmjxc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m4qpk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7cw33"]
+size = Vector2(21, 35)
+
+[node name="Jesucristo" type="CharacterBody2D" groups=["enemies"]]
+script = ExtResource("1_7cw33")
+AttackDamage = 3
+AttackCooldown = 1.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_tpypv")
+autoplay = "default"
+frame_progress = 0.81779915
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3.75, 1.25)
+shape = SubResource("RectangleShape2D_7cw33")

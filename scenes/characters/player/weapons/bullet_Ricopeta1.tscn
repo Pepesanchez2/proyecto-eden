@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dn5jf6nmhvmkk"]
+
+[ext_resource type="Texture2D" uid="uid://55vusw2svlar" path="res://assets/weapons/bullet/bullet_Ricopeta1.png" id="1_47u0g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_awhcg"]
+size = Vector2(12, 12)
+
+[node name="BulletRicopeta1" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_47u0g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_awhcg")

@@ -1,0 +1,73 @@
+[gd_scene load_steps=11 format=3 uid="uid://b5ryocs25ehvb"]
+
+[ext_resource type="Script" uid="uid://b5laiwworcuwa" path="res://scripts/characters/enemy/Angel.cs" id="1_7vsc1"]
+[ext_resource type="Texture2D" uid="uid://mskdu7hj7ikx" path="res://assets/characters/enemys/Angel-Sheet.png" id="2_7jlhe"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uqam8"]
+atlas = ExtResource("2_7jlhe")
+region = Rect2(0, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pwjhn"]
+atlas = ExtResource("2_7jlhe")
+region = Rect2(96, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pu3g4"]
+atlas = ExtResource("2_7jlhe")
+region = Rect2(192, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uqhpy"]
+atlas = ExtResource("2_7jlhe")
+region = Rect2(288, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ogw38"]
+atlas = ExtResource("2_7jlhe")
+region = Rect2(384, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i0x2j"]
+atlas = ExtResource("2_7jlhe")
+region = Rect2(480, 0, 96, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pwjhn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uqam8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pwjhn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pu3g4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uqhpy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ogw38")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i0x2j")
+}],
+"loop": true,
+"name": &"default_enemy",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7vsc1"]
+size = Vector2(25, 25)
+
+[node name="Angel" type="CharacterBody2D" groups=["enemies"]]
+script = ExtResource("1_7vsc1")
+MaxHealth = 150
+AttackCooldown = 1.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_pwjhn")
+animation = &"default_enemy"
+autoplay = "default_enemy"
+frame_progress = 0.65114206
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -1.5)
+shape = SubResource("RectangleShape2D_7vsc1")
