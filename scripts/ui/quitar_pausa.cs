@@ -7,9 +7,8 @@ public partial class quitar_pausa : Button
         Pressed += () =>
         {
             var parent = GetParent<menu_pausa>();
-            if (parent != null)
-                parent.QuitarPausa();
-                QueueFree();
+            if (parent == null)
+            parent.QuitarPausa();
         };
     }
 }

@@ -5,16 +5,14 @@ public partial class AlterEgo : CharacterBody2D
 {
     [Export]
     public float Speed = 80f;
+    [Export] public int xp = 10;
+    public InLevelUI _ui;
 
     [Export]
     public int MaxHealth = 4;
 
     public int Health;
 
-    [Export]
-    public int XPOnDeath = 12;
-
-    // Ataque por contacto
     [Export]
     public float AttackRange = 20.0f;
 
@@ -31,20 +29,32 @@ public partial class AlterEgo : CharacterBody2D
 
     public override void _Ready()
     {
-        // Busca al jugador por grupo (recomendado)
         player = GetTree().GetFirstNodeInGroup("player") as Node2D;
 
-        // Añadir este enemigo al grupo 'enemies' para que el Spawner pueda contarlos
         AddToGroup("enemies_hell");
 
         Health = MaxHealth;
 
         anim = GetNodeOrNull<AnimatedSprite2D>("AnimatedSprite2D");
+
+        Node currentScene = GetTree().CurrentScene;
+
+        CanvasLayer uiLayer = GetTree().CurrentScene.GetNode<CanvasLayer>("UI");
+
+        InLevelUI _ui = uiLayer.GetNode<InLevelUI>("InLevelUI");
+
+        GD.PrintErr(_ui);
+
+        if (_ui == null)
+            GD.PrintErr("No se encontró InLevelUI en el enemigo " + Name);
     }
 
     public override void _PhysicsProcess(double delta)
     {
-        // Asegurarse de que la referencia al jugador sigue siendo válida
+
+        if (_ui == null)
+            GD.PrintErr("No se encontró InLevelUI en el enemigo " + Name);
+
         if (player == null || !Godot.GodotObject.IsInstanceValid(player))
         {
             player = GetTree().GetFirstNodeInGroup("player") as Node2D;
@@ -52,7 +62,6 @@ public partial class AlterEgo : CharacterBody2D
                 return;
         }
 
-        // Dirección hacia el jugador
         Vector2 direction = (player.GlobalPosition - GlobalPosition).Normalized();
 
         Velocity = direction * Speed;
@@ -64,7 +73,6 @@ public partial class AlterEgo : CharacterBody2D
                 anim.FlipH = Velocity.X < 0f;
         }
 
-        // ataque por contacto
         if (attackTimer > 0f)
             attackTimer -= (float)delta;
 
@@ -85,24 +93,17 @@ public partial class AlterEgo : CharacterBody2D
         }
     }
 
-    public async void ApplyDamage(int amount)
+    public void ApplyDamage(int amount)
     {
         Health = Math.Max(0, Health - amount);
         if (Health <= 0)
         {
-
-            if (player != null)
+            if (_ui != null)
             {
-                try
-                {
-                    var meth = player.GetType().GetMethod("AddXP");
-                    if (meth != null)
-                        meth.Invoke(player, new object[] { XPOnDeath });
-                }
-                catch { }
+                _ui.AgregarExperiencia(xp);
+                GD.Print("Enviada la experiencia");
             }
 
-            try { await ToSignal(GetTree().CreateTimer(0.35f), "timeout"); } catch { }
             QueueFree();
         }
     }
