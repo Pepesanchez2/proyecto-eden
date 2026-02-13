@@ -41,7 +41,7 @@ public partial class AlterEgo : CharacterBody2D
 
         CanvasLayer uiLayer = GetTree().CurrentScene.GetNode<CanvasLayer>("UI");
 
-        InLevelUI _ui = uiLayer.GetNode<InLevelUI>("InLevelUI");
+        _ui = uiLayer.GetNode<InLevelUI>("InLevelUI");
 
         GD.PrintErr(_ui);
 

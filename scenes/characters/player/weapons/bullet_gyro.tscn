@@ -1,6 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://vtxbkjgqixdo"]
+[gd_scene load_steps=9 format=3 uid="uid://vtxbkjgqixdo"]
 
 [ext_resource type="Texture2D" uid="uid://cxwwid3qfsw5p" path="res://assets/weapons/GyroSaber.png" id="1_ry6mh"]
+[ext_resource type="Script" uid="uid://casosxjk33yfo" path="res://scripts/weapons/bullet/BulletGyro.cs" id="1_yph5b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6l4fe"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yph5b"]
 atlas = ExtResource("1_ry6mh")
@@ -38,14 +41,14 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6l4fe"]
-
 [node name="BulletGyro" type="Area2D"]
+script = ExtResource("1_yph5b")
+Speed = 500.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_6l4fe")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_ly8as")
 frame_progress = 0.6450211
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_6l4fe")
