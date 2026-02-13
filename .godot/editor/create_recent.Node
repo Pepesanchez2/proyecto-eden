@@ -1,13 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 Timer
 =======
 Marker2D
 >>>>>>> fcc40aee539dd591add4fd26a57357e3ee6385ad
+=======
+>>>>>>> 21da061 (Gyrosaber añadido sin script)
 Area2D
-CharacterBody2D
-Sprite2D
 CollisionShape2D
 AnimatedSprite2D
+Marker2D
+CharacterBody2D
+Sprite2D
 TileMapLayer
 CanvasLayer
 CheckButton

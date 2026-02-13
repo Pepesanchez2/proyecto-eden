@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3 uid="uid://vtxbkjgqixdo"]
+
+[ext_resource type="Texture2D" uid="uid://cxwwid3qfsw5p" path="res://assets/weapons/GyroSaber.png" id="1_ry6mh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yph5b"]
+atlas = ExtResource("1_ry6mh")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b46lq"]
+atlas = ExtResource("1_ry6mh")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ybm8b"]
+atlas = ExtResource("1_ry6mh")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jpyok"]
+atlas = ExtResource("1_ry6mh")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ly8as"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yph5b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b46lq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ybm8b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jpyok")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6l4fe"]
+
+[node name="BulletGyro" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_ly8as")
+frame_progress = 0.6450211
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_6l4fe")

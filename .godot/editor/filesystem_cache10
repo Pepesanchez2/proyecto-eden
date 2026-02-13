@@ -1,5 +1,6 @@
 63f7b34db8d8cdea90c76aacccf841ec
 <<<<<<< HEAD
+<<<<<<< HEAD
 ::res://::1770999568
 README.md::TextFile::-1::1770649757::0::1::::<><><>0<>0<><>::
 ::res://assets/::1770649768
@@ -144,6 +145,9 @@ BulletColt.cs::CSharpScript::8574900846023732964::1770992941::0::1::::<>Area2D<>
 BulletGrimorio.cs::CSharpScript::8118486522801039329::1770992291::0::1::::<>Area2D<><>0<>0<><>::
 =======
 ::res://::1770999814
+=======
+::res://::1771003170
+>>>>>>> 21da061 (Gyrosaber añadido sin script)
 README.md::TextFile::-1::1769099830::0::1::::<><><>0<>0<><>::
 ::res://assets/::1770308858
 ::res://assets/characters/::1769710663
@@ -244,10 +248,9 @@ menu_muerte.tscn::PackedScene::623797953249664643::1770994583::0::1::::<><><>0<>
 menu_options.tscn::PackedScene::6137407832244918637::1770994088::0::1::::<><><>0<>0<><>::uid://dctvv562rcckk::::res://assets/ui/7bc9d335-b914-44ab-8a0a-d5990bf99dcc.png<>uid://dlslblpqv8wgn::::res://assets/ui/Back.png<>uid://7s5457qj7qfa::::res://scripts/ui/button_volver2.cs
 menu_pausa.tscn::PackedScene::1122828553410760377::1770994088::0::1::::<><><>0<>0<><>::uid://drlyrwwyj7s0n::::res://scripts/ui/menu_pausa.cs<>uid://dlslblpqv8wgn::::res://assets/ui/Back.png<>uid://c3kwnagjn8tc4::::res://assets/ui/Exit.png<>uid://bg1qbkt0xagin::::res://scripts/ui/button_volver.cs<>uid://daisp7x23hnbe::::res://scripts/ui/quitar_pausa.cs
 ui.tscn::PackedScene::2868692613856951517::1770992623::0::1::::<><><>0<>0<><>::uid://dvv44pevmjam3::::res://scripts/ui/InLevelUI.cs<>uid://ck5e4s714lri6::::res://scripts/ui/LevelUpUI.cs<>uid://cvhbajlwtghma::::res://assets/ui/Barra de vida-Sheet.png<>uid://p8527q3bg6wr::::res://scenes/ui/menu_pausa.tscn
-::res://scenes/weapons/::1770994804
+::res://scenes/weapons/::1771003170
 agua.tscn::PackedScene::403682079788274681::1770994655::0::1::::<><><>0<>0<><>::
 baston.tscn::PackedScene::4440805481264120816::1770994740::0::1::::<><><>0<>0<><>::
-bullet_grimorio.tscn::PackedScene::-1::1770654963::0::1::::<><><>0<>0<><>::res://scripts/weapons/bullet/BulletGrimorio.cs<>res://assets/weapons/bullet/bullet_Grimorio.png
 colt.tscn::PackedScene::3629249733298334089::1770994088::0::1::::<><><>0<>0<><>::uid://4hqyagh0ises::::res://scripts/weapons/Colt.cs<>uid://dlnqksgw258e1::::res://scenes/characters/player/weapons/bullet_colt.tscn
 falocha.tscn::PackedScene::8345929487705564248::1770994804::0::1::::<><><>0<>0<><>::
 gyro.tscn::PackedScene::4796816150000317267::1770994471::0::1::::<><><>0<>0<><>::
@@ -255,6 +258,8 @@ navaja.tscn::PackedScene::8083734847130325454::1770994674::0::1::::<><><>0<>0<><
 puñetazo.tscn::PackedScene::2061802227319241764::1770994761::0::1::::<><><>0<>0<><>::
 ricochet.tscn::PackedScene::7323414882378034857::1770994684::0::1::::<><><>0<>0<><>::
 sombrero.tscn::PackedScene::91149513302317322::1770994788::0::1::::<><><>0<>0<><>::
+::res://scenes/weapons/bullet/::1771003170
+bullet_gyro.tscn::PackedScene::1514587709784425616::1771003148::0::1::::<><><>0<>0<><>::
 ::res://scripts/::1770130421
 ::res://scripts/characters/::1769710663
 ::res://scripts/characters/enemy/::1770992623
