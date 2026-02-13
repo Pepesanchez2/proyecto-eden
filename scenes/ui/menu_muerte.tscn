@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bswids5pdsdpt" path="res://assets/ui/95b1e465-86e4-4669-924c-fcda07b47a64.png" id="1_kjlix"]
 [ext_resource type="Texture2D" uid="uid://c3kwnagjn8tc4" path="res://assets/ui/Exit.png" id="2_kjlix"]
 [ext_resource type="Texture2D" uid="uid://cgtc8vpr5gkr" path="res://assets/ui/Youdied-Sheet.png" id="2_rebte"]
-[ext_resource type="Script" uid="uid://bg1qbkt0xagin" path="res://scripts/ui/button_volver.cs" id="3_rebte"]
+[ext_resource type="Script" uid="uid://7s5457qj7qfa" path="res://scripts/ui/button_volver2.cs" id="4_kjlix"]
 
 [node name="menu_muerte" type="Control"]
 layout_mode = 3
@@ -44,4 +44,4 @@ icon = ExtResource("2_kjlix")
 flat = true
 icon_alignment = 1
 expand_icon = true
-script = ExtResource("3_rebte")
+script = ExtResource("4_kjlix")
