@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://f0st5d7c3ebh"]
+
+[node name="Navaja" type="Node2D"]
+
+[node name="Marker2D" type="Marker2D" parent="."]

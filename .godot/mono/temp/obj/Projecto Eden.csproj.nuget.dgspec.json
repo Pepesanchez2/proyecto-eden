@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Pepe\\Documents\\proyecto-eden-main (2)\\proyecto-eden-main\\Projecto Eden.csproj": {}
+    "/home/dev/Programacion/Proyecto Eden/proyecto-eden/Projecto Eden.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Pepe\\Documents\\proyecto-eden-main (2)\\proyecto-eden-main\\Projecto Eden.csproj": {
+    "/home/dev/Programacion/Proyecto Eden/proyecto-eden/Projecto Eden.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Pepe\\Documents\\proyecto-eden-main (2)\\proyecto-eden-main\\Projecto Eden.csproj",
+        "projectUniqueName": "/home/dev/Programacion/Proyecto Eden/proyecto-eden/Projecto Eden.csproj",
         "projectName": "Projecto Eden",
-        "projectPath": "C:\\Users\\Pepe\\Documents\\proyecto-eden-main (2)\\proyecto-eden-main\\Projecto Eden.csproj",
-        "packagesPath": "C:\\Users\\Pepe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Pepe\\Documents\\proyecto-eden-main (2)\\proyecto-eden-main\\.godot\\mono\\temp\\obj\\",
+        "projectPath": "/home/dev/Programacion/Proyecto Eden/proyecto-eden/Projecto Eden.csproj",
+        "packagesPath": "/home/dev/.nuget/packages/",
+        "outputPath": "/home/dev/Programacion/Proyecto Eden/proyecto-eden/.godot/mono/temp/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Pepe\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/dev/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -75,7 +75,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.416/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/dev/.dotnet/sdk/8.0.415/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
