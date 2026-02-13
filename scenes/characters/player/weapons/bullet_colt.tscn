@@ -6,9 +6,8 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_noqsh"]
 size = Vector2(1.75, 1.5)
 
-[node name="BulletColt" type="Node2D"]
+[node name="BulletColt" type="CharacterBody2D"]
 script = ExtResource("1_jete0")
-Damage = 50
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1

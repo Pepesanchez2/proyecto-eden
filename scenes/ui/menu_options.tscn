@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dctvv562rcckk" path="res://assets/ui/7bc9d335-b914-44ab-8a0a-d5990bf99dcc.png" id="1_snv1p"]
 [ext_resource type="Texture2D" uid="uid://dlslblpqv8wgn" path="res://assets/ui/Back.png" id="2_snv1p"]
-[ext_resource type="Script" uid="uid://bg1qbkt0xagin" path="res://scripts/ui/button_volver.cs" id="3_snv1p"]
+[ext_resource type="Script" uid="uid://7s5457qj7qfa" path="res://scripts/ui/button_volver2.cs" id="3_snv1p"]
 
 [node name="menu_options" type="Control"]
 layout_mode = 3

@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class button_volver : Button
+public partial class button_volver2 : Button
 {
 
 [Export] public string RutaEscena = "res://scenes/ui/menu.tscn";
@@ -13,8 +13,6 @@ public partial class button_volver : Button
 
     private void CambiarEscena()
     {
-        var parent = GetParent<menu_pausa>();
-        parent.QuitarPausa();
         GetTree().ChangeSceneToFile(RutaEscena);
     }
 }

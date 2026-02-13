@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://daisp7x23hnbe" path="res://scripts/ui/quitar_pausa.cs" id="5_q0fld"]
 
 [node name="menu_pausa" type="CanvasLayer"]
+layer = 5
 script = ExtResource("1_57d5x")
 
 [node name="volver" type="Button" parent="."]

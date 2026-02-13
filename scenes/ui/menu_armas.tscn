@@ -18,9 +18,9 @@
 [ext_resource type="Script" uid="uid://bfhurln77ghbx" path="res://scripts/ui/weapon/ui_gyro.cs" id="10_3t6pl"]
 [ext_resource type="Script" uid="uid://ccoxmkldhghwy" path="res://scripts/ui/weapon/ui_colt.cs" id="10_xglfg"]
 [ext_resource type="Script" uid="uid://cenygqn32wkke" path="res://scripts/ui/weapon/ui_baston.cs" id="11_4s64s"]
-[ext_resource type="Script" uid="uid://bg1qbkt0xagin" path="res://scripts/ui/button_volver.cs" id="12_3lj6i"]
 [ext_resource type="Script" uid="uid://1pdmju22vsyv" path="res://scripts/ui/weapon/ui_ricochet.cs" id="13_7wyrb"]
 [ext_resource type="Script" uid="uid://c3k8s7y1qa43a" path="res://scripts/ui/weapon/ui_navaja.cs" id="15_evg1h"]
+[ext_resource type="Script" uid="uid://7s5457qj7qfa" path="res://scripts/ui/button_volver2.cs" id="21_biskl"]
 
 [node name="menu_armas" type="Control"]
 layout_mode = 3
@@ -193,4 +193,4 @@ action_mode = 0
 flat = true
 icon_alignment = 1
 expand_icon = true
-script = ExtResource("12_3lj6i")
+script = ExtResource("21_biskl")

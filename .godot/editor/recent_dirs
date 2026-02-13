@@ -1,4 +1,5 @@
 res://scripts/ui
+res://scripts/weapons/bullet
 res://assets/weapons/bullet
 res://assets/ui
 res://scenes/ui
@@ -6,6 +7,5 @@ res://scenes/characters/enemy/BulletGrimorio
 res://assets/characters/enemys
 res://scenes/characters/enemy
 res://scripts/characters/enemy
-res://scripts/weapons/bullet
 res://scenes/levels
 res://assets/characters/player
