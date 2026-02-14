@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://calu4jrklafh8"]
+[gd_scene load_steps=0 format=3 uid="uid://calu4jrklafh8"]
 
 [node name="Gyro" type="Node2D"]
 

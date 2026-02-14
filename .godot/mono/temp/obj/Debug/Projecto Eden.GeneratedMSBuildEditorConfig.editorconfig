@@ -1,4 +1,9 @@
 is_global = true
+build_property.GodotDisabledSourceGenerators = 
+build_property.GodotProjectDir = C:\Users\Pepe\Documents\proyecto-eden-main (2)\proyecto-eden-main\
+build_property.GodotProjectDirBase64 = 
+build_property.GodotSourceGenerators = 
+build_property.IsGodotToolsProject = 
 build_property.TargetFramework = net8.0
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = 

@@ -1,4 +1,5 @@
 res://scripts/characters/enemy/AlterEgo.cs
+res://scripts/ui/quitar_pausa.cs
 res://scripts/ui/weapon/ui_sombrero.cs
 res://scripts/characters/enemy/GabeNewel.cs
 res://scripts/ui/InLevelUI.cs
@@ -24,7 +25,8 @@ res://scripts/characters/player/Player.cs
 res://scripts/weapons/bullet/BulletGrimorio.cs
 res://scripts/ui/weapon/ui_puñetazo.cs
 res://scripts/ui/button_volver.cs
-res://scripts/ui/quitar_pausa.cs
 res://scripts/characters/enemy/Jesucristo.cs
 res://scripts/ui/weapon/ui_ricochet.cs
 res://scripts/ui/button_volver2.cs
+res://scenes/ui/ui.tscn
+res://scenes/characters/enemy/infierno/AlterEgo.tscn

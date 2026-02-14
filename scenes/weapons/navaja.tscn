@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dnf26xi04k5l7"]
+[gd_scene load_steps=0 format=3 uid="uid://dnf26xi04k5l7"]
 
 [node name="Navaja" type="Node2D"]
 
