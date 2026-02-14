@@ -8,8 +8,6 @@ public partial class AlterEgo : CharacterBody2D
     [Export] public int xp = 10;
     public InLevelUI _ui;
 
-    public CanvasLayer uiLayer;
-
     [Export]
     public int MaxHealth = 4;
 
@@ -41,13 +39,22 @@ public partial class AlterEgo : CharacterBody2D
 
         Node currentScene = GetTree().CurrentScene;
 
-        uiLayer = GetTree().CurrentScene.GetNode<CanvasLayer>("UI");
+        CanvasLayer uiLayer = GetTree().CurrentScene.GetNode<CanvasLayer>("UI");
 
         _ui = uiLayer.GetNode<InLevelUI>("InLevelUI");
+
+        GD.PrintErr(_ui);
+
+        if (_ui == null)
+            GD.PrintErr("No se encontró InLevelUI en el enemigo " + Name);
     }
 
     public override void _PhysicsProcess(double delta)
     {
+
+        if (_ui == null)
+            GD.PrintErr("No se encontró InLevelUI en el enemigo " + Name);
+
         if (player == null || !Godot.GodotObject.IsInstanceValid(player))
         {
             player = GetTree().GetFirstNodeInGroup("player") as Node2D;

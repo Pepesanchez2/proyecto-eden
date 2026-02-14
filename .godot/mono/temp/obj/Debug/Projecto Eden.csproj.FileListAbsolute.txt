@@ -51,3 +51,4 @@ D:\Insti\Proyecto Eden\proyecto-eden\.godot\mono\temp\obj\Debug\refint\Projecto 
 D:\Insti\Proyecto Eden\proyecto-eden\.godot\mono\temp\obj\Debug\Projecto Eden.pdb
 D:\Insti\Proyecto Eden\proyecto-eden\.godot\mono\temp\obj\Debug\Projecto Eden.genruntimeconfig.cache
 D:\Insti\Proyecto Eden\proyecto-eden\.godot\mono\temp\obj\Debug\ref\Projecto Eden.dll
+D:\Insti\Proyecto Eden\proyecto-eden\.godot\mono\temp\obj\Debug\Projecto Eden.sourcelink.json
