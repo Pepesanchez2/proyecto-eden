@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dclrtqta6mb50"]
+[gd_scene load_steps=0 format=3 uid="uid://dclrtqta6mb50"]
 
 [node name="Ricochet" type="Node2D"]
 

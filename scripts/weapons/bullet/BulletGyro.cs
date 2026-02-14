@@ -31,8 +31,43 @@ public partial class BulletGyro : Area2D
 		lifeTimer = Lifetime;
 		SetPhysicsProcess(true);
 
-		// Conectar señal de colisión
-		BodyEntered += OnBodyEntered;
+		// Prefer AnimatedSprite2D if present (gyro has animation)
+		var anim = GetNodeOrNull<AnimatedSprite2D>("AnimatedSprite2D");
+		if (anim == null)
+		{
+			// Fallback to Sprite2D
+			var sprite = GetNodeOrNull<Sprite2D>("Sprite2D");
+			if (sprite == null)
+			{
+				try
+				{
+					var tex = ResourceLoader.Load<Texture2D>("res://assets/weapons/GyroSaber.png");
+					if (tex != null)
+					{
+						sprite = new Sprite2D();
+						sprite.Name = "Sprite2D";
+						sprite.Texture = tex;
+						AddChild(sprite);
+					}
+				}
+				catch { }
+			}
+		}
+
+		var col = GetNodeOrNull<CollisionShape2D>("CollisionShape2D");
+		if (col == null)
+		{
+			try
+			{
+				col = new CollisionShape2D();
+				col.Name = "CollisionShape2D";
+				col.Shape = new RectangleShape2D() { Size = new Vector2(8, 8) };
+				AddChild(col);
+			}
+			catch { }
+		}
+
+		try { Connect("body_entered", new Callable(this, nameof(OnBodyEntered))); } catch { }
 	}
 
 	/// <summary>
@@ -41,7 +76,7 @@ public partial class BulletGyro : Area2D
 	public void Initialize(Vector2 direction, Node2D owner = null)
 	{
 		if (direction == Vector2.Zero)
-			direction = Vector2.Right;
+			direction = new Vector2(1, 0);
 
 		velocity = direction.Normalized() * Speed;
 		shooter = owner;
@@ -50,64 +85,87 @@ public partial class BulletGyro : Area2D
 		penetrationCount = 0;
 		hitBodies.Clear();
 		lifeTimer = Lifetime;
+
+		// orient visual if possible
+		try
+		{
+			var anim = GetNodeOrNull<AnimatedSprite2D>("AnimatedSprite2D");
+			if (anim != null)
+			{
+				anim.FlipH = direction.X < 0f;
+				// prefer animation named "gyro" if present
+				try
+				{
+					if (anim.SpriteFrames != null && anim.SpriteFrames.HasAnimation("gyro"))
+					{
+						anim.Animation = "gyro";
+					}
+				}
+				catch { }
+				try { anim.Frame = 0; anim.Play(); } catch { }
+			}
+			else
+			{
+				var spr = GetNodeOrNull<Sprite2D>("Sprite2D");
+				if (spr != null) spr.FlipH = direction.X < 0f;
+			}
+		}
+		catch { }
 	}
 
 	public override void _PhysicsProcess(double delta)
 	{
 		float dt = (float)delta;
 
-		// Movimiento manual (más fiable para proyectiles rápidos)
-		GlobalPosition += velocity * dt;
+		if (velocity != Vector2.Zero)
+			GlobalPosition += velocity * dt;
 
-		// Control de vida
 		lifeTimer -= dt;
 		if (lifeTimer <= 0f)
 		{
 			QueueFree();
+			return;
 		}
 	}
 
 	private void OnBodyEntered(Node body)
 	{
-		if (body == null)
-			return;
+		if (body == null) return;
+		if (shooter != null && body == shooter) return;
 
-		// No golpear al que disparó
-		if (shooter != null && body == shooter)
-			return;
-
-		// Evitar daño múltiple al mismo objetivo
-		if (hitBodies.Contains(body))
-			return;
+		if (hitBodies.Contains(body)) return;
 
 		hitBodies.Add(body);
 		penetrationCount++;
 
-		ApplyDamage(body);
-
-		// Debug opcional
-		GD.Print($"BulletGyro: Hit {body.Name} (penetration {penetrationCount}/{MaxPenetrations})");
-
-		// Si alcanzó el límite de penetraciones → destruir
-		if (penetrationCount >= MaxPenetrations)
-		{
-			QueueFree();
-		}
-	}
-
-	private void ApplyDamage(Node body)
-	{
 		try
 		{
-			var method = body.GetType().GetMethod("ApplyDamage");
-			if (method != null)
+			var meth = body.GetType().GetMethod("ApplyDamage");
+			if (meth != null)
 			{
-				method.Invoke(body, new object[] { Damage });
+				meth.Invoke(body, new object[] { Damage });
+				// try to read remaining health for optional logging
+				try
+				{
+					var f = body.GetType().GetField("Health");
+					var fm = body.GetType().GetField("MaxHealth");
+					int remaining = -1, max = -1;
+					if (f != null) remaining = (int)f.GetValue(body);
+					if (fm != null) max = (int)fm.GetValue(body);
+					if (remaining >= 0 && max > 0)
+						GD.Print($"BulletGyro: Hit {body.Name} damage={Damage} remaining={remaining}/{max}");
+					else
+						GD.Print($"BulletGyro: Hit {body.Name} damage={Damage}");
+				}
+				catch { GD.Print($"BulletGyro: Hit {body.Name} damage={Damage}"); }
 			}
 		}
 		catch (Exception e)
 		{
 			GD.PrintErr($"BulletGyro damage error: {e.Message}");
 		}
+
+		if (penetrationCount >= MaxPenetrations)
+			QueueFree();
 	}
 }

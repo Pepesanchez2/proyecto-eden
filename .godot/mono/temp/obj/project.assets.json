@@ -88,24 +88,26 @@
     ]
   },
   "packageFolders": {
-    "/home/dev/.nuget/packages/": {}
+    "C:\\Users\\droch\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/dev/Programacion/Proyecto Eden/proyecto-eden/Projecto Eden.csproj",
+      "projectUniqueName": "D:\\Insti\\Proyecto Eden\\proyecto-eden\\Projecto Eden.csproj",
       "projectName": "Projecto Eden",
-      "projectPath": "/home/dev/Programacion/Proyecto Eden/proyecto-eden/Projecto Eden.csproj",
-      "packagesPath": "/home/dev/.nuget/packages/",
-      "outputPath": "/home/dev/Programacion/Proyecto Eden/proyecto-eden/.godot/mono/temp/obj/",
+      "projectPath": "D:\\Insti\\Proyecto Eden\\proyecto-eden\\Projecto Eden.csproj",
+      "packagesPath": "C:\\Users\\droch\\.nuget\\packages\\",
+      "outputPath": "D:\\Insti\\Proyecto Eden\\proyecto-eden\\.godot\\mono\\temp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/dev/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\droch\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -161,7 +163,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/home/dev/.dotnet/sdk/8.0.415/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.416/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
