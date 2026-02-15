@@ -229,7 +229,7 @@ public partial class Grimorio : CharacterBody2D
         
     }
 
-    public async void ApplyDamage(int amount)
+    public void ApplyDamage(int amount)
     {
         Health = Math.Max(0, Health - amount);
         if (Health <= 0)

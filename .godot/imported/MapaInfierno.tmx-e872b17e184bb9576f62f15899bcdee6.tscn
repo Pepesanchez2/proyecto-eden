@@ -1,0 +1,40 @@
+[gd_scene load_steps=10 format=3]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rfx13"]
+texture_region_size = Vector2i(64, 64)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e5p22"]
+texture_region_size = Vector2i(64, 64)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dxndr"]
+texture_region_size = Vector2i(64, 64)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_do66j"]
+texture_region_size = Vector2i(64, 64)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cq0f2"]
+texture_region_size = Vector2i(64, 64)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6ebom"]
+texture_region_size = Vector2i(64, 64)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uvybd"]
+texture_region_size = Vector2i(64, 64)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w3sut"]
+texture_region_size = Vector2i(64, 64)
+
+[sub_resource type="TileSet" id="TileSet_y35qs"]
+tile_size = Vector2i(64, 64)
+sources/0 = SubResource("TileSetAtlasSource_rfx13")
+sources/1 = SubResource("TileSetAtlasSource_e5p22")
+sources/2 = SubResource("TileSetAtlasSource_dxndr")
+sources/3 = SubResource("TileSetAtlasSource_do66j")
+sources/4 = SubResource("TileSetAtlasSource_cq0f2")
+sources/5 = SubResource("TileSetAtlasSource_6ebom")
+sources/6 = SubResource("TileSetAtlasSource_uvybd")
+sources/7 = SubResource("TileSetAtlasSource_w3sut")
+
+[node name="MapaInfierno" type="TileMapLayer"]
+texture_filter = 1
+tile_set = SubResource("TileSet_y35qs")

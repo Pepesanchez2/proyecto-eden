@@ -97,6 +97,10 @@ public partial class InLevelUI : Control
 
         if (timeLeft <= 0)
         {
+            if (oleada >= 5)
+            {
+                GetTree().ChangeSceneToFile("res://scenes/ui/menu_cambio.tscn");
+            }
             oleada++;
             waveOleadaLabel.Text = "Oleada " + oleada;
             timeLeft = tiempoInicial;

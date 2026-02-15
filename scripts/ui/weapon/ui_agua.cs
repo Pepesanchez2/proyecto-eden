@@ -12,5 +12,6 @@ public partial class ui_agua : Button
     private void AlPulsar()
     {
         button_select.Instancia.SeleccionarArma(IdArma);
+        button_select2.Instancia.SeleccionarArma(IdArma);
     }
 }

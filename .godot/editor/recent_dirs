@@ -1,9 +1,10 @@
+res://scenes/ui
+res://scripts/ui
+res://addons
 res://assets/weapons
 res://scripts/weapons/bullet
-res://scripts/ui
 res://assets/weapons/bullet
 res://assets/ui
-res://scenes/ui
 res://scenes/characters/enemy/BulletGrimorio
 res://assets/characters/enemys
 res://scenes/characters/enemy

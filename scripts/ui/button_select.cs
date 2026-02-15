@@ -4,7 +4,7 @@ using System.Collections.Generic;
 public partial class button_select : Button {
     public static button_select Instancia;
 
-    public string armaSeleccionada = null;
+    public string armaSeleccionada;
 
     public override void _Ready()
     {

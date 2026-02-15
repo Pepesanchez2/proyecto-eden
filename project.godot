@@ -14,6 +14,10 @@ config/name="Projecto Eden"
 run/main_scene="uid://5dfumaprw6w7"
 config/features=PackedStringArray("4.5", "C#", "Mobile")
 
+[autoload]
+
+GameManager="*res://scripts/ui/GameManager.cs"
+
 [display]
 
 window/size/viewport_width=1980
@@ -23,6 +27,10 @@ window/size/mode=3
 [dotnet]
 
 project/assembly_name="Projecto Eden"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/GDScript/addons/YATI/plugin.cfg")
 
 [global_group]
 

@@ -42,7 +42,7 @@ public partial class Player : CharacterBody2D
 
 	// Salud y experiencia
 	[Export]
-	public int MaxHealth = 10000;
+	public int MaxHealth = 10;
 
 	public int Health;
 

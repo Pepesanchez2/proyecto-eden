@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://bcd0ygcqel7pn"]
+
+[ext_resource type="Texture2D" uid="uid://dctvv562rcckk" path="res://assets/ui/7bc9d335-b914-44ab-8a0a-d5990bf99dcc.png" id="1_srm60"]
+[ext_resource type="Texture2D" uid="uid://nig72k4ut7n1" path="res://assets/ui/Select.png" id="2_gahhe"]
+[ext_resource type="Script" uid="uid://c5ssdpgdtm6ck" path="res://scripts/ui/button_cambio.cs" id="3_srm60"]
+
+[node name="menu_cambio" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1915.0
+offset_bottom = 1079.0
+texture = ExtResource("1_srm60")
+flip_h = true
+
+[node name="select" type="Button" parent="."]
+z_index = 1
+texture_filter = 1
+layout_mode = 0
+offset_left = 821.0
+offset_top = 829.0
+offset_right = 1132.0
+offset_bottom = 965.0
+action_mode = 0
+icon = ExtResource("2_gahhe")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("3_srm60")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
