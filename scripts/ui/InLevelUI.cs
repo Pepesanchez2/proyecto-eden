@@ -25,7 +25,7 @@ public partial class InLevelUI : Control
     private ProgressBar expBar;
     private Label expLabel;
     private int experienciaActual = 0;
-    private int xpPorNivel = 100; // XP necesaria por nivel
+    private int xpPorNivel = 40; // XP necesaria por nivel
 
     public override void _Ready()
     {

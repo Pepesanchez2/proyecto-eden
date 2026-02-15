@@ -11,8 +11,11 @@ public partial class Sombra : CharacterBody2D
 
     public int Health;
 
-    [Export]
-    public int XPOnDeath = 12;
+    [Export] public int xp = 8;
+    public InLevelUI _ui;
+
+    public CanvasLayer uiLayer;
+
 
     // Ataque por contacto
     [Export]
@@ -40,11 +43,14 @@ public partial class Sombra : CharacterBody2D
         Health = MaxHealth;
 
         anim = GetNodeOrNull<AnimatedSprite2D>("AnimatedSprite2D");
+
+        uiLayer = GetTree().CurrentScene.GetNode<CanvasLayer>("UI");
+
+        _ui = uiLayer.GetNode<InLevelUI>("InLevelUI");
     }
 
     public override void _PhysicsProcess(double delta)
     {
-        // Asegurarse de que la referencia al jugador sigue siendo válida
         if (player == null || !Godot.GodotObject.IsInstanceValid(player))
         {
             player = GetTree().GetFirstNodeInGroup("player") as Node2D;
@@ -90,22 +96,12 @@ public partial class Sombra : CharacterBody2D
         Health = Math.Max(0, Health - amount);
         if (Health <= 0)
         {
-        
-
-            // dar XP al jugador si existe AddXP
-            if (player != null)
+        if (_ui != null)
             {
-                try
-                {
-                    var meth = player.GetType().GetMethod("AddXP");
-                    if (meth != null)
-                        meth.Invoke(player, new object[] { XPOnDeath });
-                }
-                catch { }
+                _ui.AgregarExperiencia(xp);
+                GD.Print("Enviada la experiencia");
             }
 
-            // esperar un pequeño tiempo para la animación y luego eliminar
-            try { await ToSignal(GetTree().CreateTimer(0.35f), "timeout"); } catch { }
             QueueFree();
         }
     }

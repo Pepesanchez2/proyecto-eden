@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 ﻿62169
 C:/Users/droch/Desktop/Godot_v4.5.1-stable_mono_win64/Godot_v4.5.1-stable_mono_win64.exe
+=======
+﻿64319
+C:/Users/Pepe/Desktop/Godot_v4.5.1-stable_mono_win64/Godot_v4.5.1-stable_mono_win64.exe
+>>>>>>> 38e2c0026c5f67ee63b1b2844616f985615af4df

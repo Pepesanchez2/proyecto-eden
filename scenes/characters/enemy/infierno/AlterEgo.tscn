@@ -52,7 +52,7 @@ size = Vector2(21, 35)
 [node name="AlterEgo" type="CharacterBody2D" groups=["enemies_hell"]]
 script = ExtResource("1_iy6dx")
 Speed = 90.0
-MaxHealth = 300
+MaxHealth = 200
 AttackDamage = 2
 AttackCooldown = 1.0
 

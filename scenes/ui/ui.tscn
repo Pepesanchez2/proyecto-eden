@@ -122,7 +122,6 @@ text = "Oleada 1"
 
 [node name="ExpBar" type="ProgressBar" parent="InLevelUI"]
 layout_mode = 0
-offset_left = 59.0
 offset_top = 1053.0
 offset_right = 1920.335
 offset_bottom = 1080.0
