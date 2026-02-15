@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ba25repdrkbvt"
-path="res://.godot/imported/Infierno.png-9112d7bed7bab8a8398edf873f14e745.ctex"
+uid="uid://cmpuy67vjt22k"
+path="res://.godot/imported/LagoMagma-Sheet-Sheet.png-7ef21c40ff5b83b699d7be904710db4c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/level/Infierno.png"
-dest_files=["res://.godot/imported/Infierno.png-9112d7bed7bab8a8398edf873f14e745.ctex"]
+source_file="res://assets/level/obstaculos/Infierno/LagoMagma-Sheet-Sheet.png"
+dest_files=["res://.godot/imported/LagoMagma-Sheet-Sheet.png-7ef21c40ff5b83b699d7be904710db4c.ctex"]
 
 [params]
 

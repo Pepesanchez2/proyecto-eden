@@ -1,0 +1,32 @@
+[gd_scene load_steps=8 format=3]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qudph"]
+texture_region_size = Vector2i(64, 64)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n74wt"]
+texture_region_size = Vector2i(64, 64)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sysox"]
+texture_region_size = Vector2i(64, 64)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3lajb"]
+texture_region_size = Vector2i(64, 64)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oqmnv"]
+texture_region_size = Vector2i(64, 64)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ivo1h"]
+texture_region_size = Vector2i(64, 64)
+
+[sub_resource type="TileSet" id="TileSet_hhnuv"]
+tile_size = Vector2i(64, 64)
+sources/0 = SubResource("TileSetAtlasSource_qudph")
+sources/1 = SubResource("TileSetAtlasSource_n74wt")
+sources/2 = SubResource("TileSetAtlasSource_sysox")
+sources/3 = SubResource("TileSetAtlasSource_3lajb")
+sources/4 = SubResource("TileSetAtlasSource_oqmnv")
+sources/5 = SubResource("TileSetAtlasSource_ivo1h")
+
+[node name="MapaCielo" type="TileMapLayer"]
+texture_filter = 1
+tile_set = SubResource("TileSet_hhnuv")
