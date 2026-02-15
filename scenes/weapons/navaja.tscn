@@ -1,5 +1,8 @@
-[gd_scene load_steps=0 format=3 uid="uid://dnf26xi04k5l7"]
+[gd_scene load_steps=2 format=3 uid="uid://dnf26xi04k5l7"]
+
+[ext_resource type="Script" uid="uid://dmk3ogb6ipxs6" path="res://scripts/weapons/Navaja.cs" id="1_v8cse"]
 
 [node name="Navaja" type="Node2D"]
+script = ExtResource("1_v8cse")
 
 [node name="Marker2D" type="Marker2D" parent="."]
