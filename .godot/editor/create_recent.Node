@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 Camera2D
 TextureRect
+=======
+>>>>>>> 85febabcc9e45c8968a266030b23544beac95d35
 TileMapLayer
 Marker2D
 CollisionShape2D

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 res://scenes/levels/cielo.tscn
 res://scripts/ui/InLevelUI.cs
 res://scripts/ui/button_cambio.cs
@@ -37,3 +38,7 @@ res://scripts/weapons/Navaja.cs
 res://scripts/ui/GameManager.cs
 res://scenes/ui/menu.tscn
 res://scripts/ui/button_select2.cs
+=======
+res://scenes/weapons/gyro.tscn
+res://scenes/weapons/navaja.tscn
+>>>>>>> 85febabcc9e45c8968a266030b23544beac95d35

@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Pepe\\Documents\\proyecto-eden-main (2)\\proyecto-eden-main\\Projecto Eden.csproj": {}
+    "D:\\Insti\\Proyecto Eden\\proyecto-eden\\Projecto Eden.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Pepe\\Documents\\proyecto-eden-main (2)\\proyecto-eden-main\\Projecto Eden.csproj": {
+    "D:\\Insti\\Proyecto Eden\\proyecto-eden\\Projecto Eden.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Pepe\\Documents\\proyecto-eden-main (2)\\proyecto-eden-main\\Projecto Eden.csproj",
+        "projectUniqueName": "D:\\Insti\\Proyecto Eden\\proyecto-eden\\Projecto Eden.csproj",
         "projectName": "Projecto Eden",
-        "projectPath": "C:\\Users\\Pepe\\Documents\\proyecto-eden-main (2)\\proyecto-eden-main\\Projecto Eden.csproj",
-        "packagesPath": "C:\\Users\\Pepe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Pepe\\Documents\\proyecto-eden-main (2)\\proyecto-eden-main\\.godot\\mono\\temp\\obj\\",
+        "projectPath": "D:\\Insti\\Proyecto Eden\\proyecto-eden\\Projecto Eden.csproj",
+        "packagesPath": "C:\\Users\\droch\\.nuget\\packages\\",
+        "outputPath": "D:\\Insti\\Proyecto Eden\\proyecto-eden\\.godot\\mono\\temp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Pepe\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\droch\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
